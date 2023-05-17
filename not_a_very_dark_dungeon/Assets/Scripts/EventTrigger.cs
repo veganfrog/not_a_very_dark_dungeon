@@ -1,18 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EventTrigger : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter(Collider Player)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (Player.transform.CompareTag("Player"))
+        {
+            Debug.Log("ayo");
+        }
     }
 }
