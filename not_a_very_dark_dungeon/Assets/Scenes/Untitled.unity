@@ -231,6 +231,8 @@ GameObject:
   - component: {fileID: 220652350}
   - component: {fileID: 220652349}
   - component: {fileID: 220652348}
+  - component: {fileID: 220652352}
+  - component: {fileID: 220652351}
   m_Layer: 0
   m_Name: BattleController
   m_TagString: Untagged
@@ -279,6 +281,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &220652351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220652347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac5d5b00af4c2b478f843b1582da7af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 0
+  Speed: 0
+  BaseDamage: 0
+--- !u!114 &220652352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220652347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 178c0bf9da24384429a8bba1c0243a54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &484064390
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,8 +695,9 @@ GameObject:
   - component: {fileID: 1508187365}
   - component: {fileID: 1508187364}
   - component: {fileID: 1508187363}
+  - component: {fileID: 1508187367}
   m_Layer: 0
-  m_Name: Enemy1
+  m_Name: BasicRat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -751,6 +781,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: -176.518, z: 0}
+--- !u!114 &1508187367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508187362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1e0a7d135fa1c94c999377793fddf62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1577629927
 GameObject:
   m_ObjectHideFlags: 0
