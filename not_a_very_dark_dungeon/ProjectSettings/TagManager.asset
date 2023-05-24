@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - BasicRat
+  - RottingDog
+  - Skeleton
+  - PlaguedBear
+  - Hobo
+  - Slime
   layers:
   - Default
   - TransparentFX

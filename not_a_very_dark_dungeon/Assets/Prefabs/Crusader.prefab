@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 7700562553618584244}
   - component: {fileID: 7700562553618584245}
   - component: {fileID: 7700562553618584246}
-  - component: {fileID: 7700562553618584247}
-  - component: {fileID: 7700562553618584242}
   m_Layer: 0
   m_Name: Crusader
   m_TagString: Untagged
@@ -99,33 +97,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7700562553618584247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7700562553618584264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 178c0bf9da24384429a8bba1c0243a54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HeroAbilities: {fileID: 0}
-  friendlyPositions: []
-  enemyPositions: []
---- !u!114 &7700562553618584242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7700562553618584264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0943b7ca111787f4f920ee69264345af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 0
-  BaseDamage: 0
-  Speed: 0

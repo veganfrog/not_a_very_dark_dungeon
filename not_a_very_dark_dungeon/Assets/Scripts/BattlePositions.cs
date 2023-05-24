@@ -35,6 +35,7 @@ public class BattlePositions : MonoBehaviour
     }
     private void Update()
     {
+      
         if (HeroAbilities.ReadyingSmite && Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

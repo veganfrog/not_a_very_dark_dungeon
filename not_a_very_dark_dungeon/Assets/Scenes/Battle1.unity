@@ -311,9 +311,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1994057615}
   - component: {fileID: 1994057614}
-  - component: {fileID: 1994057613}
   - component: {fileID: 1994057612}
-  - component: {fileID: 1994057611}
+  - component: {fileID: 1994057617}
+  - component: {fileID: 1994057616}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -321,21 +321,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1994057611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1994057610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1e0a7d135fa1c94c999377793fddf62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 9
-  BaseDamage: 3
-  Speed: 5
 --- !u!114 &1994057612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,29 +333,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a5fa217522c108498fb1294aaf4912a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basicRat: {fileID: 1994057611}
-  crusaderscript: {fileID: 1994057613}
+  stats: {fileID: 1994057616}
+  crusaderscript: {fileID: 1994057617}
   Crusader: {fileID: 7700562553618584264, guid: 28cef9a190f919f46896ad9deb697ba9, type: 3}
   Enemy1: {fileID: 1460871325368646857, guid: f2355e641e016a84c8ad699678056a41, type: 3}
   ReadyingSmite: 0
   ReadyingProtectiveLight: 0
   ReadyingAccusativeScroll: 0
   ReadyingStunningStrike: 0
---- !u!114 &1994057613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1994057610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0943b7ca111787f4f920ee69264345af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 22
-  BaseDamage: 6
-  Speed: 1
 --- !u!114 &1994057614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -419,3 +389,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1994057616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994057610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac5d5b00af4c2b478f843b1582da7af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
+  Health: 0
+  BaseDamage: 0
+  Speed: 0
+--- !u!114 &1994057617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994057610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0943b7ca111787f4f920ee69264345af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 22
+  BaseDamage: 6
+  Speed: 1
