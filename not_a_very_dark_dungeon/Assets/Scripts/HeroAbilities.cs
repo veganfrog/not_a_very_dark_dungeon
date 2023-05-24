@@ -11,12 +11,12 @@ public class HeroAbilities : MonoBehaviour
     public BasicRat basicRat;
     public GameObject Crusader;
     public GameObject Enemy1;
-    private ReadyingAttack = false;
+    //private ReadyingAttack = false;
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q)){
-            ReadyingAttack = true;
+            //ReadyingAttack = true;
         }
         
     }
@@ -24,13 +24,13 @@ public class HeroAbilities : MonoBehaviour
     private void Smite()
     {
         int AbilityDamage = Range(7, 10);
-        int Damage = BaseDamage + AbilityDamage ;
-        stats.Health -= Damage ;
-        if(stats.Health <= 0)
-        {
-            Destroy(Enemy1);
-        }
-        Debug.Log(Damage);
+        //int Damage = BaseDamage + AbilityDamage ;
+        //stats.Health -= Damage ;
+        //if(stats.Health <= 0)
+        //{
+        //    Destroy(Enemy1);
+        //}
+        //Debug.Log(Damage);
     }
     
 }
