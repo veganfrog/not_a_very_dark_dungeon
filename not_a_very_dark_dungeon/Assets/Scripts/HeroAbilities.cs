@@ -104,7 +104,7 @@ public class HeroAbilities : MonoBehaviour
 
         
 
-    }
+    }   
 
     // HERO ABILITIES
        
@@ -122,24 +122,87 @@ public class HeroAbilities : MonoBehaviour
         
             Debug.Log(Damage);
         }
-        private void ProtectiveLight()
+        public  void ProtectiveLight(GameObject clickedObject)
         {
             // gives 50% defense bonus for one attack
         }
-        private void AccusativeScroll()
+        public  void AccusativeScroll(GameObject clickedObject1, GameObject clickedObject2)
         {
-            // damages  first two enemies
-        }
-        private void StunningStrike()
+        // damages  first two enemies
+
+        int AbilityDamage = Range(2, 6  );
+        int Damage = crusaderscript.BaseDamage + AbilityDamage;
+        if (clickedObject1 != null && clickedObject2 != null)
         {
-            // attemps to stun one enemy
+            Debug.Log("HIT BOTH ENEMIES");
 
+            clickedObject1.GetComponent<Stats>().Health -= Damage;
+            clickedObject2.GetComponent<Stats>().Health -= Damage;
+            if (clickedObject1.GetComponent<Stats>().Health <= 0)
+            {
+                Destroy(clickedObject1);
+            }
 
+            if (clickedObject2.GetComponent<Stats>().Health <= 0)
+            {
+                Destroy(clickedObject2);
+            }
 
+            Debug.Log(Damage);
         }
+        else if (clickedObject1 != null && clickedObject2 == null)
+        {
+            clickedObject1.GetComponent<Stats>().Health -= Damage;
+            if (clickedObject1.GetComponent<Stats>().Health <= 0)
+            {
+                Destroy(clickedObject1);
+            }
+        }
+        else
+        {
+
+            Debug.Log("HIT SECOND ENEMY");
+            if (clickedObject2.GetComponent<Stats>().Health <= 0)
+            {
+                Destroy(clickedObject2);
+            }
+        }
+        
+
+
+    }
+        public void StunningStrike(GameObject clickedObject)
+        {
+        // attemps to stun one enemy
+        int AbilityDamage = Range(2, 4);
+        int Damage = crusaderscript.BaseDamage + AbilityDamage;
+        stats.Health -= Damage;
+        int StunChance = 90;
+        StunChance -= clickedObject.GetComponent<Stats>().StunResist;
+        int StunRoll = Range(1, 100);
+        clickedObject.GetComponent<Stats>().Health -= Damage;
+        if (clickedObject.GetComponent<Stats>().Health <= 0)
+        {
+            Destroy(clickedObject);
+        }
+        else if (StunRoll <= StunChance)
+        {
+            //STUN ENEMY
+            stats.IsStunned = true;
+            Debug.Log("STUNNED");
+        }
+        else {
+            Debug.Log("COULNDT STUN");
+                }
+        
+
+        Debug.Log(Damage);
+
+
+    }
 
     //CHARACTER SELECTION
-    private void SelectingAttacker(int i)
+    public void SelectingAttacker(int i)
     {
         switch(i)
         {
