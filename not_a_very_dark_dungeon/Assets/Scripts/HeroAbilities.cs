@@ -20,7 +20,7 @@ public class HeroAbilities : MonoBehaviour
     public GameObject Enemy1;
 
 
-    //Attack status
+    //Selected attacker status
     public bool CrusaderReady = false;
     public bool HWMReady = false;
     public bool PlagueReady = false;
@@ -43,93 +43,66 @@ public class HeroAbilities : MonoBehaviour
         Debug.Log("started");
     }
     private void Update()
-    {   //Selecting an attacker
+    {
+        //Selecting an attacker
 
-
-            // SELECTING CRUSADER
-            if (!CrusaderReady && Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1)|| Input.GetKeyDown(KeyCode.Alpha2)|| Input.GetKeyDown(KeyCode.Alpha3)|| Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            if (Input.GetKeyDown(KeyCode.Alpha1))
             {
-                CrusaderReady = true;
-                Debug.Log("READYING CRUSADER FOR ATTACK");
+                int i = 1;
+                SelectingAttacker(i);
             }
-            else if (CrusaderReady && Input.GetKeyDown(KeyCode.Alpha1))
+            if (Input.GetKeyDown(KeyCode.Alpha2))
             {
-                CrusaderReady = false;
-                Debug.Log("NOT READYING CRUSADER FOR ATTACK");
+                int i = 2;
+                SelectingAttacker(i);
             }
-            //SELECTING HWM
-            if (!HWMReady && Input.GetKeyDown(KeyCode.Alpha2))
+            if (Input.GetKeyDown(KeyCode.Alpha3))
             {
-                HWMReady = true;
-                Debug.Log("READYING HIGHWAYMAN FOR ATTACK");
+                int i = 3;
+                SelectingAttacker(i);
             }
-            else if (HWMReady && Input.GetKeyDown(KeyCode.Alpha2))
+            if (Input.GetKeyDown(KeyCode.Alpha4))
             {
-                HWMReady = false;
-                Debug.Log("NOT READYING HIGHWAYMAN FOR ATTACK");
-            }
-
-            //SELECTING PLAGUE DOCTOR
-            if (!PlagueReady && Input.GetKeyDown(KeyCode.Alpha3))
-            {
-                PlagueReady = true;
-                Debug.Log("READYING PLAGUE DOCTOR FOR ATTACK");
-            }
-            else if (PlagueReady && Input.GetKeyDown(KeyCode.Alpha3))
-            {
-                PlagueReady = false;
-                Debug.Log("NOT READYING PLAGUE DOCTOR FOR ATTACK");
+                int i = 4;
+                SelectingAttacker(i);
             }
 
-            //SELECTING OCCULTIST
+        }
 
-            if (!OccultistReady && Input.GetKeyDown(KeyCode.Alpha4))
-            {
-                OccultistReady = true;
-                Debug.Log("READYING OCCULTIST FOR ATTACK");
-            }
-            else if (OccultistReady && Input.GetKeyDown(KeyCode.Alpha4))
-            {
-                OccultistReady = false;
-                Debug.Log("NOT READYING OCCULTIST FOR ATTACK");
-            }
+
 
         //ATTACKS
 
             //CRUSADERS ATTACKS
-                //SMITE
-                if (CrusaderReady && !ReadyingSmite && Input.GetKeyDown(KeyCode.Q)  ){
-                    ReadyingSmite = true;
-                    Debug.Log("READYING SMITE");
-                }
-                else if(CrusaderReady && ReadyingSmite && Input.GetKeyDown(KeyCode.Q))
-                {
-                    ReadyingSmite = false;
-                    Debug.Log("NOT READYING SMITE");
-                }
-               
-                //PROTECTIVE LIGHT
-                if (CrusaderReady && !ReadyingProtectiveLight && Input.GetKeyDown(KeyCode.W))
-                {
-                     ReadyingProtectiveLight = true;
-                    Debug.Log("READYING PROTECTIVE LIGHT");
-                }
-                else if (CrusaderReady && ReadyingProtectiveLight && Input.GetKeyDown(KeyCode.W))
-                {
-                     ReadyingProtectiveLight = false;
-                    Debug.Log("NOT READYING PROTECTIVE LIGHT");
-                }
-                //ACCUSATIVE SCROLL
-                if (CrusaderReady && !ReadyingAccusativeScroll && Input.GetKeyDown(KeyCode.E))
-                {
-                   ReadyingAccusativeScroll = true;
-                    Debug.Log("READYING ACCUSATIVE SCROLL");
-                }
-                else if (CrusaderReady && ReadyingAccusativeScroll && Input.GetKeyDown(KeyCode.E))
-                {
-                    ReadyingAccusativeScroll = false;
-                    Debug.Log("NOT READYING ACCUSATIVE SCROLL");
-                }
+            if (CrusaderReady && (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.R)))
+        {
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                int i = 1;
+                SelectingCrusadersAttack(i);
+            }
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                int i = 2;
+                SelectingCrusadersAttack(i);
+            }
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                int i = 3;
+                SelectingCrusadersAttack(i);
+            }
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                int i = 4;
+                SelectingCrusadersAttack(i);
+            }
+
+        }
+
+
+        
 
     }
 
@@ -160,8 +133,143 @@ public class HeroAbilities : MonoBehaviour
         private void StunningStrike()
         {
             // attemps to stun one enemy
+
+
+
         }
-    
+
+    //CHARACTER SELECTION
+    private void SelectingAttacker(int i)
+    {
+        switch(i)
+        {
+            case 1:
+                if (!CrusaderReady)
+                {
+                    CrusaderReady = true;
+                    Debug.Log("READYING CRUSADER FOR ATTACK");
+                }
+                else if (CrusaderReady)
+                {
+                    CrusaderReady = false;
+                    Debug.Log("NOT READYING CRUSADER FOR ATTACK AND UNSELECTING ATTACKS");
+                    ReadyingSmite = false;
+                    ReadyingProtectiveLight = false;
+                    ReadyingAccusativeScroll = false;
+                    ReadyingStunningStrike = false;
+                }
+                break;
+            case 2:
+                if (!HWMReady)
+                {
+                    HWMReady = true;
+                    Debug.Log("READYING HIGHWAYMAN FOR ATTACK");
+                }
+                else if (HWMReady)
+                {
+                    HWMReady = false;
+                    Debug.Log("NOT READYING HIGHWAYMAN FOR ATTACK");
+                }
+                break;
+            case 3:
+                if (!PlagueReady)
+                {
+                    PlagueReady = true;
+                    Debug.Log("READYING PLAGUE DOCTOR FOR ATTACK");
+                }
+                else if (PlagueReady)
+                {
+                    PlagueReady = false;
+                    Debug.Log("NOT READYING PLAGUE DOCTOR FOR ATTACK");
+                }
+                break;
+            case 4:
+                if (!OccultistReady)
+                {
+                    OccultistReady = true;
+                    Debug.Log("READYING OCCULTIST FOR ATTACK");
+                }
+                else if (OccultistReady)
+                {
+                    OccultistReady = false;
+                    Debug.Log("NOT READYING OCCULTIST FOR ATTACK");
+                }
+                break;
+        }
+    }
+    //SELECTING CRUSADERS ATTACK
+    private void SelectingCrusadersAttack(int i )
+    {
+        switch (i) {
+            //SMITE
+            case 1:
+                
+                    if (CrusaderReady && !ReadyingSmite)
+                    {
+                        ReadyingSmite = true;
+                        Debug.Log("READYING SMITE");
+                    }
+                    else if (CrusaderReady && ReadyingSmite)
+                    {
+                        ReadyingSmite = false;
+                        Debug.Log("NOT READYING SMITE");
+                    }
+                break;
+            //PROTECTIVE LIGHT
+            case 2:
+                if (CrusaderReady && !ReadyingProtectiveLight)
+                {
+                    ReadyingProtectiveLight = true;
+                    Debug.Log("READYING PROTECTIVE LIGHT");
+                }
+                else if (CrusaderReady && ReadyingProtectiveLight)
+                {
+                    ReadyingProtectiveLight = false;
+                    Debug.Log("NOT READYING PROTECTIVE LIGHT");
+                }
+                break;
+
+            //ACCUSATIVE SCROLL
+            case 3:
+
+                if (CrusaderReady && !ReadyingAccusativeScroll)
+                {
+                    ReadyingAccusativeScroll = true;
+                    Debug.Log("READYING ACCUSATIVE SCROLL");
+                }
+                else if (CrusaderReady && ReadyingAccusativeScroll)
+                {
+                    ReadyingAccusativeScroll = false;
+                    Debug.Log("NOT READYING ACCUSATIVE SCROLL");
+                }
+                break;
+            //STUNNING STRIKE
+            case 4:
+                if (CrusaderReady && !ReadyingStunningStrike)
+                {
+                    ReadyingAccusativeScroll = true;
+                    Debug.Log("READYING ACCUSATIVE SCROLL");
+                }
+                else if (CrusaderReady && ReadyingStunningStrike)
+                {
+                    ReadyingAccusativeScroll = false;
+                    Debug.Log("NOT READYING ACCUSATIVE SCROLL");
+                }
+
+                break;
+
+
+        }
+
+
+
+        
+
+        
+        
+        
+        
+       
+       
+    }
 }
-//smite and other damage abilities make the enemiems take damage in their own scripts
-// Affter clicking q 
