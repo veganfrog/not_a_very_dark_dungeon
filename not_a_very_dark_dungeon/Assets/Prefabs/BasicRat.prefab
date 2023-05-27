@@ -110,7 +110,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac5d5b00af4c2b478f843b1582da7af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 1460871325368646857}
   Health: 9
   BaseDamage: 3
   Speed: 5
+  BleedResist: 10
+  PoisonResist: 60
+  StunResist: 0
