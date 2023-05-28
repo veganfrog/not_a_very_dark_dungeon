@@ -4,9 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Undefined
-  - Enemy
+  - BasicRat
+  - DiseasedDog
+  - Slime
+  - Hobo
+  - Crusader
+  - Plague Doctor
+  - Occultist
+  - HWM
+  - PlagueRat
   - Friendly
+  - Slime2
   layers:
   - Default
   - TransparentFX

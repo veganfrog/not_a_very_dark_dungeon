@@ -4,12 +4,13 @@ using System.Collections;
 
 public class TurnController : MonoBehaviour
 
-{// TDDO : MKE IT SO THAT ONLY ONE PERSON IS READY.
+{
     // Teams and members
     public List<GameObject> friendlyTeam;
     public List<GameObject> enemyTeam;
     public float turnDelay = 1.0f;
 
+    public HeroAbilities heroAbilities;
 
 
     // Start is called before the first frame update
@@ -33,7 +34,6 @@ public class TurnController : MonoBehaviour
         // Sort members based on speed
         allMembers.Sort((a, b) => GetSpeed(b) - GetSpeed(a));
 
-        // If there are members with the same speed, shuffle their order randomly
         for (int i = 0; i < allMembers.Count - 1; i++)
         {
             if (GetSpeed(allMembers[i]) == GetSpeed(allMembers[i + 1]))
@@ -45,7 +45,6 @@ public class TurnController : MonoBehaviour
                     endIndex++;
                 }
 
-                // Shuffle members within the speed group
                 for (int j = startIndex; j < endIndex; j++)
                 {
                     int randomIndex = Random.Range(j, endIndex);
@@ -54,13 +53,16 @@ public class TurnController : MonoBehaviour
                     allMembers[randomIndex] = temp;
                 }
 
-                // Skip the shuffled members
                 i = endIndex - 1;
             }
         }
 
         // Add members to turn order
         turnOrder.AddRange(allMembers);
+        for(int i = 0; i < 8; i++)
+        {
+            Debug.Log(turnOrder[i]);
+        }
 
         return turnOrder;
     }
@@ -78,6 +80,7 @@ public class TurnController : MonoBehaviour
 
     IEnumerator StartCombat(List<GameObject> turnOrder)
     {
+       
         // Main combat loop
         while (!IsBattleOver())
         {
@@ -90,20 +93,8 @@ public class TurnController : MonoBehaviour
                     continue;
                 }
 
-                // Perform attack
-                if (member.tag == "Friendly")
-                {
-                    // Select a random enemy target
-                    GameObject target = enemyTeam[Random.Range(0, enemyTeam.Count)];
-                    PerformAttack(member, target);
-                }
-                else if (member.tag == "Enemy")
-                {
-                    // Select a random friendly target
-                    GameObject target = friendlyTeam[Random.Range(0, friendlyTeam.Count)];
-                    PerformAttack(member, target);
-                }
-
+                PerformAttack(member);
+    
                 // Wait for a short duration before the next turn
                 yield return new WaitForSeconds(turnDelay);
             }
@@ -116,32 +107,42 @@ public class TurnController : MonoBehaviour
 
 
 
-    void PerformAttack(GameObject attacker, GameObject defender)
+    void PerformAttack(GameObject member)
     {
-      /*  Debug.Log(attacker.name + " attacks " + defender.name);
-
-        // Retrieve attack and defense stats from Stats script attached to member objects
-        Stats attackerStats = attacker.GetComponent<Stats>();
-        Stats defenderStats = defender.GetComponent<Stats>();
-
-        // Calculate damage
-        int damage = attackerStats.attack - defenderStats.defense;
-        if (damage < 0)
+        Debug.Log("got here");
+        int i;
+        switch (member.tag)
         {
-            damage = 0;
-        }
+           
+            case "Crusader":
+                i = 1;
+                heroAbilities.SelectingAttacker(i);
+                break;
+            case "HWM":
+                 i = 2;
+                heroAbilities.SelectingAttacker(i);
+                break;
+            case "PlagueDoctor":
+                 i = 3;
+                heroAbilities.SelectingAttacker(i);
+                break;
+            case "Occultist":
+                 i = 4;
+                heroAbilities.SelectingAttacker(i);
+                break;
+            case "BasicRat":
+                break;
+            case "DiseasedDog":
+                break;
+            case "Slime":
+                break;
+            case "PlagueRat":
+                break;
+            case "Hobo":
+                break;
 
-        // Apply damage to defender
-        defenderStats.health -= damage;
-        if (defenderStats.health < 0)
-        {
-            defenderStats.health = 0;
         }
-
-        // Print attack result
-        Debug.Log(defender.name + " takes " + damage + " damage!");
-        Debug.Log(defender.name + "'s health: " + defenderStats.health);
-      */
+   
     }
 
     bool IsBattleOver()

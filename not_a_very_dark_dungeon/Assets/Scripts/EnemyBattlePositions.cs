@@ -6,20 +6,40 @@ using UnityEngine;
 public class EnemyBattlePositions : MonoBehaviour
 {
     public HeroAbilities HeroAbilities;
-    public GameObject[] enemyCubePrefabs; // Array to store the enemy cube prefabs
-    public Transform[] enemyPositions; // Array to store the enemy positions
-    private GameObject[] enemyCubes; // Array to store the enemy cubes
+    public GameObject[] enemyCubePrefabs;
+    public Transform[] enemyPositions; 
+    private GameObject[] enemyCubes; 
 
-    // Start is called before the first frame update
+   
     void Start()
     {
         enemyCubes = new GameObject[enemyPositions.Length];
+        bool[] occupiedPositions = new bool[enemyPositions.Length];
+
         for (int i = 0; i < enemyPositions.Length; i++)
         {
-            GameObject cube = Instantiate(enemyCubePrefabs[i]);
-            cube.transform.position = enemyPositions[i].position;
+            GameObject cubePrefab = enemyCubePrefabs[i];
+            GameObject cube = Instantiate(cubePrefab);
+
+            int randomPositionIndex = GetRandomPositionIndex(occupiedPositions);
+            cube.transform.position = enemyPositions[randomPositionIndex].position;
+            occupiedPositions[randomPositionIndex] = true;
+
             enemyCubes[i] = cube;
         }
+    }
+
+    int GetRandomPositionIndex(bool[] occupiedPositions)
+    {
+        int randomIndex = Random.Range(0, enemyPositions.Length);
+
+        // Check if the random index is already occupied
+        while (occupiedPositions[randomIndex])
+        {
+            randomIndex = Random.Range(0, enemyPositions.Length);
+        }
+
+        return randomIndex;
     }
 
     // Update is called once per frame

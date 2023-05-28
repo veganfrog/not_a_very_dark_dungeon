@@ -46,31 +46,6 @@ public class HeroAbilities : MonoBehaviour
     {
         //Selecting an attacker
 
-        if (Input.GetKeyDown(KeyCode.Alpha1)|| Input.GetKeyDown(KeyCode.Alpha2)|| Input.GetKeyDown(KeyCode.Alpha3)|| Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                int i = 1;
-                SelectingAttacker(i);
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha2))
-            {
-                int i = 2;
-                SelectingAttacker(i);
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha3))
-            {
-                int i = 3;
-                SelectingAttacker(i);
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha4))
-            {
-                int i = 4;
-                SelectingAttacker(i);
-            }
-
-        }
-
 
 
         //ATTACKS

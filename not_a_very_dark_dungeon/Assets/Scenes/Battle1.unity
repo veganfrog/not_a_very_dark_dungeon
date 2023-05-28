@@ -339,6 +339,7 @@ MonoBehaviour:
   crusaderscript: {fileID: 1994057617}
   Crusader: {fileID: 7700562553618584264, guid: 28cef9a190f919f46896ad9deb697ba9, type: 3}
   Enemy1: {fileID: 1460871325368646857, guid: f2355e641e016a84c8ad699678056a41, type: 3}
+  IsTurn: 0
   CrusaderReady: 0
   HWMReady: 0
   PlagueReady: 0
@@ -436,12 +437,10 @@ MonoBehaviour:
   - {fileID: 1460871325368646857, guid: f2355e641e016a84c8ad699678056a41, type: 3}
   - {fileID: 5038942994373966841, guid: 67ccfdd6cce627b418465a90cfa2de91, type: 3}
   - {fileID: 7451548689917782836, guid: e36d0e7c6836b7146921f54e21493658, type: 3}
-  - {fileID: 5843175069178450000, guid: 10db953604014db41ad3c7c357779d14, type: 3}
   enemyPositions:
   - {fileID: 1460871325368646861, guid: f2355e641e016a84c8ad699678056a41, type: 3}
   - {fileID: 5038942994373966821, guid: 67ccfdd6cce627b418465a90cfa2de91, type: 3}
   - {fileID: 7451548689917782840, guid: e36d0e7c6836b7146921f54e21493658, type: 3}
-  - {fileID: 5843175069178450004, guid: 10db953604014db41ad3c7c357779d14, type: 3}
 --- !u!114 &1994057620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -463,5 +462,6 @@ MonoBehaviour:
   - {fileID: 1460871325368646857, guid: f2355e641e016a84c8ad699678056a41, type: 3}
   - {fileID: 5038942994373966841, guid: 67ccfdd6cce627b418465a90cfa2de91, type: 3}
   - {fileID: 7451548689917782836, guid: e36d0e7c6836b7146921f54e21493658, type: 3}
-  - {fileID: 5843175069178450000, guid: 10db953604014db41ad3c7c357779d14, type: 3}
+  - {fileID: 7451548689917782836, guid: e36d0e7c6836b7146921f54e21493658, type: 3}
   turnDelay: 1
+  heroAbilities: {fileID: 1994057612}
