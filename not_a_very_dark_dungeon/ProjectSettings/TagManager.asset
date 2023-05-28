@@ -4,12 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - BasicRat
-  - RottingDog
-  - Skeleton
-  - PlaguedBear
-  - Hobo
-  - Slime
+  - Undefined
+  - Enemy
+  - Friendly
   layers:
   - Default
   - TransparentFX

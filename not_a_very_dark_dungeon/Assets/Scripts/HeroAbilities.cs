@@ -19,7 +19,7 @@ public class HeroAbilities : MonoBehaviour
     public GameObject Crusader;
     public GameObject Enemy1;
 
-
+    public bool IsTurn;
     //Selected attacker status
     public bool CrusaderReady = false;
     public bool HWMReady = false;

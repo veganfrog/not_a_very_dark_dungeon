@@ -310,10 +310,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1994057615}
-  - component: {fileID: 1994057614}
   - component: {fileID: 1994057612}
   - component: {fileID: 1994057617}
   - component: {fileID: 1994057616}
+  - component: {fileID: 1994057619}
+  - component: {fileID: 1994057618}
+  - component: {fileID: 1994057620}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -337,43 +339,14 @@ MonoBehaviour:
   crusaderscript: {fileID: 1994057617}
   Crusader: {fileID: 7700562553618584264, guid: 28cef9a190f919f46896ad9deb697ba9, type: 3}
   Enemy1: {fileID: 1460871325368646857, guid: f2355e641e016a84c8ad699678056a41, type: 3}
+  CrusaderReady: 0
+  HWMReady: 0
+  PlagueReady: 0
+  OccultistReady: 0
   ReadyingSmite: 0
   ReadyingProtectiveLight: 0
   ReadyingAccusativeScroll: 0
   ReadyingStunningStrike: 0
---- !u!114 &1994057614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1994057610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 178c0bf9da24384429a8bba1c0243a54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HeroAbilities: {fileID: 1994057612}
-  friendlyCubePrefabs:
-  - {fileID: 7700562553618584264, guid: 28cef9a190f919f46896ad9deb697ba9, type: 3}
-  - {fileID: 378073371480584984, guid: e2187754e4525cc428eddf97b4701dba, type: 3}
-  - {fileID: 9015312184592562931, guid: addacbf9b0537284685054a879043ee1, type: 3}
-  - {fileID: 2448190249141080962, guid: 36ce3d54270c99c44b0ddca9a4a46143, type: 3}
-  friendlyPositions:
-  - {fileID: 7700562553618584243, guid: 28cef9a190f919f46896ad9deb697ba9, type: 3}
-  - {fileID: 378073371480584980, guid: e2187754e4525cc428eddf97b4701dba, type: 3}
-  - {fileID: 2448190249141080966, guid: 36ce3d54270c99c44b0ddca9a4a46143, type: 3}
-  - {fileID: 9015312184592562927, guid: addacbf9b0537284685054a879043ee1, type: 3}
-  enemyCubePrefabs:
-  - {fileID: 1460871325368646857, guid: f2355e641e016a84c8ad699678056a41, type: 3}
-  - {fileID: 5038942994373966841, guid: 67ccfdd6cce627b418465a90cfa2de91, type: 3}
-  - {fileID: 7451548689917782836, guid: e36d0e7c6836b7146921f54e21493658, type: 3}
-  - {fileID: 5843175069178450000, guid: 10db953604014db41ad3c7c357779d14, type: 3}
-  enemyPositions:
-  - {fileID: 1460871325368646861, guid: f2355e641e016a84c8ad699678056a41, type: 3}
-  - {fileID: 5038942994373966821, guid: 67ccfdd6cce627b418465a90cfa2de91, type: 3}
-  - {fileID: 7451548689917782840, guid: e36d0e7c6836b7146921f54e21493658, type: 3}
-  - {fileID: 5843175069178450004, guid: 10db953604014db41ad3c7c357779d14, type: 3}
 --- !u!4 &1994057615
 Transform:
   m_ObjectHideFlags: 0
@@ -401,10 +374,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac5d5b00af4c2b478f843b1582da7af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
   Health: 0
   BaseDamage: 0
   Speed: 0
+  BleedResist: 0
+  PoisonResist: 0
+  StunResist: 0
+  IsStunned: 0
 --- !u!114 &1994057617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,3 +396,72 @@ MonoBehaviour:
   Health: 22
   BaseDamage: 6
   Speed: 1
+--- !u!114 &1994057618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994057610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64f77f5d9b79f743b2b6e888366cabf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HeroAbilities: {fileID: 1994057612}
+  friendlyCubePrefabs:
+  - {fileID: 7700562553618584264, guid: 28cef9a190f919f46896ad9deb697ba9, type: 3}
+  - {fileID: 378073371480584984, guid: e2187754e4525cc428eddf97b4701dba, type: 3}
+  - {fileID: 9015312184592562931, guid: addacbf9b0537284685054a879043ee1, type: 3}
+  - {fileID: 2448190249141080962, guid: 36ce3d54270c99c44b0ddca9a4a46143, type: 3}
+  friendlyPositions:
+  - {fileID: 7700562553618584243, guid: 28cef9a190f919f46896ad9deb697ba9, type: 3}
+  - {fileID: 378073371480584980, guid: e2187754e4525cc428eddf97b4701dba, type: 3}
+  - {fileID: 9015312184592562927, guid: addacbf9b0537284685054a879043ee1, type: 3}
+  - {fileID: 2448190249141080966, guid: 36ce3d54270c99c44b0ddca9a4a46143, type: 3}
+--- !u!114 &1994057619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994057610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad048e9338eff2e40b33f7e14e7afbf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HeroAbilities: {fileID: 1994057612}
+  enemyCubePrefabs:
+  - {fileID: 1460871325368646857, guid: f2355e641e016a84c8ad699678056a41, type: 3}
+  - {fileID: 5038942994373966841, guid: 67ccfdd6cce627b418465a90cfa2de91, type: 3}
+  - {fileID: 7451548689917782836, guid: e36d0e7c6836b7146921f54e21493658, type: 3}
+  - {fileID: 5843175069178450000, guid: 10db953604014db41ad3c7c357779d14, type: 3}
+  enemyPositions:
+  - {fileID: 1460871325368646861, guid: f2355e641e016a84c8ad699678056a41, type: 3}
+  - {fileID: 5038942994373966821, guid: 67ccfdd6cce627b418465a90cfa2de91, type: 3}
+  - {fileID: 7451548689917782840, guid: e36d0e7c6836b7146921f54e21493658, type: 3}
+  - {fileID: 5843175069178450004, guid: 10db953604014db41ad3c7c357779d14, type: 3}
+--- !u!114 &1994057620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994057610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fcf35479d85e6644b0a8c89595921dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  friendlyTeam:
+  - {fileID: 7700562553618584264, guid: 28cef9a190f919f46896ad9deb697ba9, type: 3}
+  - {fileID: 378073371480584984, guid: e2187754e4525cc428eddf97b4701dba, type: 3}
+  - {fileID: 9015312184592562931, guid: addacbf9b0537284685054a879043ee1, type: 3}
+  - {fileID: 2448190249141080962, guid: 36ce3d54270c99c44b0ddca9a4a46143, type: 3}
+  enemyTeam:
+  - {fileID: 1460871325368646857, guid: f2355e641e016a84c8ad699678056a41, type: 3}
+  - {fileID: 5038942994373966841, guid: 67ccfdd6cce627b418465a90cfa2de91, type: 3}
+  - {fileID: 7451548689917782836, guid: e36d0e7c6836b7146921f54e21493658, type: 3}
+  - {fileID: 5843175069178450000, guid: 10db953604014db41ad3c7c357779d14, type: 3}
+  turnDelay: 1
