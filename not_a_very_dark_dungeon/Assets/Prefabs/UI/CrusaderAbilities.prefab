@@ -284,15 +284,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a5fa217522c108498fb1294aaf4912a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TurnController: {fileID: 0}
   stats: {fileID: 0}
-  crusaderscript: {fileID: 0}
-  Crusader: {fileID: 0}
-  Enemy1: {fileID: 0}
+  UIcontroller: {fileID: 0}
   IsTurn: 1
   CrusaderReady: 1
   HWMReady: 0
   PlagueReady: 0
-  OccultistReady: 0
   ReadyingSmite: 0
   ReadyingProtectiveLight: 0
   ReadyingAccusativeScroll: 0
@@ -684,15 +682,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a5fa217522c108498fb1294aaf4912a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TurnController: {fileID: 0}
   stats: {fileID: 0}
-  crusaderscript: {fileID: 0}
-  Crusader: {fileID: 0}
-  Enemy1: {fileID: 0}
+  UIcontroller: {fileID: 0}
   IsTurn: 1
   CrusaderReady: 1
   HWMReady: 0
   PlagueReady: 0
-  OccultistReady: 0
   ReadyingSmite: 0
   ReadyingProtectiveLight: 0
   ReadyingAccusativeScroll: 1
@@ -981,15 +977,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a5fa217522c108498fb1294aaf4912a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TurnController: {fileID: 0}
   stats: {fileID: 0}
-  crusaderscript: {fileID: 0}
-  Crusader: {fileID: 0}
-  Enemy1: {fileID: 0}
+  UIcontroller: {fileID: 0}
   IsTurn: 1
   CrusaderReady: 1
   HWMReady: 0
   PlagueReady: 0
-  OccultistReady: 0
   ReadyingSmite: 1
   ReadyingProtectiveLight: 0
   ReadyingAccusativeScroll: 0

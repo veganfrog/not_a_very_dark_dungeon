@@ -13,7 +13,7 @@ public class HeroAbilities : MonoBehaviour
     public TurnController TurnController;
     // stat blocks
     public Stats stats;
-
+    public UIController UIcontroller;
 
 
 
@@ -167,11 +167,15 @@ public class HeroAbilities : MonoBehaviour
     //CHARACTER SELECTION
     public void SelectingAttacker(int i)
     {
+        int y;
         switch(i)
         {
             case 1:
                 if (!CrusaderReady)
                 {
+                    y = 1;
+                    UIcontroller.ReadyUI(y);
+                    
                     CrusaderReady = true;
                     Debug.Log("READYING CRUSADER FOR ATTACK");
                 }
@@ -212,6 +216,7 @@ public class HeroAbilities : MonoBehaviour
    
         }
     }
+
     //SELECTING CRUSADERS ATTACK
     public void SelectingCrusadersAttack(int i )
     {
