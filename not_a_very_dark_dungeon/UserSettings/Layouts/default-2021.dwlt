@@ -19,7 +19,11 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
+<<<<<<< Updated upstream
   m_Title: Game
+=======
+  m_Title: Scene
+>>>>>>> Stashed changes
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -100,7 +104,11 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
+<<<<<<< Updated upstream
   controlID: 113
+=======
+  controlID: 112
+>>>>>>> Stashed changes
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -146,7 +154,11 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
+<<<<<<< Updated upstream
   controlID: 114
+=======
+  controlID: 88
+>>>>>>> Stashed changes
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -309,9 +321,15 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< Updated upstream
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: d6e8ffff64eaffff38fbffff
+=======
+      m_SelectedIDs: 1aceffff
+      m_LastClickedID: -12774
+      m_ExpandedIDs: 10ceffff5cceffffbeceffff50cfffff00d0ffff44d0fffff8d1ffffb4d4ffff36fbffff
+>>>>>>> Stashed changes
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: Slime(Clone)
@@ -327,7 +345,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 0
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 7}
+        m_ClientGUIView: {fileID: 8}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -419,22 +437,33 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
+<<<<<<< Updated upstream
   - Assets/Scripts
   m_LastFoldersGridSize: -1
+=======
+  - Assets/Scenes
+  m_LastFoldersGridSize: 16
+>>>>>>> Stashed changes
   m_LastProjectPath: C:\Users\pelan\OneDrive\Dokumentai\GitHub\not_a_very_dark_dungeon\not_a_very_dark_dungeon
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< Updated upstream
     m_SelectedIDs: 6e580000
     m_LastClickedID: 22638
     m_ExpandedIDs: 00000000445800006a58000000ca9a3b
+=======
+    m_SelectedIDs: 4a580000
+    m_LastClickedID: 22602
+    m_ExpandedIDs: 00000000385800003a58000000ca9a3b
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: Scripts
@@ -777,9 +806,15 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< Updated upstream
     m_Target: {x: 0.2653848, y: 1.067323, z: 3.8955348}
     speed: 2
     m_Value: {x: 0.2653848, y: 1.067323, z: 3.8955348}
+=======
+    m_Target: {x: 413.36688, y: 270.4288, z: -6.714966}
+    speed: 2
+    m_Value: {x: 413.36688, y: 270.4288, z: -6.714966}
+>>>>>>> Stashed changes
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -826,13 +861,21 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.41009495, y: -0.5811433, z: 0.4267131, w: 0.55862033}
+    m_Target: {x: 0.053666342, y: -0.0015254893, z: -0.0001448955, w: -0.99858886}
     speed: 2
+<<<<<<< Updated upstream
     m_Value: {x: 0.4100855, y: -0.58112997, z: 0.4267033, w: 0.55860746}
   m_Size:
     m_Target: 1.5268825
     speed: 2
     m_Value: 1.5268825
+=======
+    m_Value: {x: 0.05366487, y: 0.0014702344, z: 0.000016103444, w: -0.998558}
+  m_Size:
+    m_Target: 242.5165
+    speed: 2
+    m_Value: 242.5165
+>>>>>>> Stashed changes
   m_Ortho:
     m_Target: 0
     speed: 2

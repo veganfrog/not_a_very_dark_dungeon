@@ -77,15 +77,15 @@ public class EnemyAbilities : MonoBehaviour
         {
             case 0:
                 target = FriendlyPlayers[randomIndex];
-                RabidBiteDamage(target);
+                SlimeBashDamage(target);
                 break;
             case 1:
                 target = FriendlyPlayers[randomIndex];
-                RabidBiteDamage(target);
+                SlimeBashDamage(target);
                 break;
             case 2:
                 target = FriendlyPlayers[randomIndex];
-                RabidBiteDamage(target);
+                SlimeBashDamage(target);
                 break;
         }
     }
@@ -96,15 +96,15 @@ public class EnemyAbilities : MonoBehaviour
         {
             case 0:
                 target = FriendlyPlayers[randomIndex];
-                RabidBiteDamage(target);
+                ShankDamage(target);
                 break;
             case 1:
                 target = FriendlyPlayers[randomIndex];
-                RabidBiteDamage(target);
+                ShankDamage(target);
                 break;
             case 2:
                 target = FriendlyPlayers[randomIndex];
-                RabidBiteDamage(target);
+                ShankDamage(target);
                 break;
         }
     }
@@ -115,15 +115,15 @@ public class EnemyAbilities : MonoBehaviour
         {
             case 0:
                 target = FriendlyPlayers[randomIndex];
-                RabidBiteDamage(target);
+                BashDamage(target);
                 break;
             case 1:
                 target = FriendlyPlayers[randomIndex];
-                RabidBiteDamage(target);
+                BashDamage(target);
                 break;
             case 2:
                 target = FriendlyPlayers[randomIndex];
-                RabidBiteDamage(target);
+                BashDamage(target);
                 break;
         }
     }
@@ -134,15 +134,15 @@ public class EnemyAbilities : MonoBehaviour
         {
             case 0:
                 target = FriendlyPlayers[randomIndex];
-                RabidBiteDamage(target);
+                SpitDamage(target);
                 break;
             case 1:
                 target = FriendlyPlayers[randomIndex];
-                RabidBiteDamage(target);
+                SpitDamage(target);
                 break;
             case 2:
                 target = FriendlyPlayers[randomIndex];
-                RabidBiteDamage(target);
+                SpitDamage(target);
                 break;
         }
     }
@@ -217,5 +217,114 @@ public class EnemyAbilities : MonoBehaviour
         turnController.ReadyUp();
         Debug.Log(Damage);
     }
+    public void SlimeBashDamage(GameObject target)
+    {
+        int AbilityDamage = Random.Range(1, 3);
+        int Damage = stats.BaseDamage + AbilityDamage;
+        stats.Health -= Damage;
+        int StunChance = 90;
+        StunChance -= target.GetComponent<Stats>().StunResist;
+        int StunRoll = Random.Range(1, 100);
+        target.GetComponent<Stats>().Health -= Damage;
+        if (target.GetComponent<Stats>().Health <= 0)
+        {
+            Destroy(target);
+        }
+        else if (StunRoll <= StunChance)
+        {
+            //STUN ENEMY
+            stats.IsStunned = true;
+            Debug.Log("STUNNED");
+        }
+        else
+        {
+            Debug.Log("COULNDT STUN");
+        }
 
+        turnController.ReadyUp();
+        Debug.Log(Damage);
+    }
+
+    //HOBO ATTACKS
+    public void ShankDamage(GameObject target)
+    {
+        Debug.Log("SHANK");
+        int AbilityDamage = Random.Range(4, 12);
+        int Damage = stats.BaseDamage + AbilityDamage;
+        stats.Health -= Damage;
+        int BleedChance = 80;
+        BleedChance -= target.GetComponent<Stats>().BleedResist;
+        int BleedRoll = Random.Range(1, 100);
+        target.GetComponent<Stats>().Health -= Damage;
+        if (target.GetComponent<Stats>().Health <= 0)
+        {
+            Destroy(target);
+        }
+        else if (BleedRoll <= BleedChance)
+        {
+            //Bleed enemy
+            stats.BleedDamage += 4;
+            Debug.Log("BLED FOR 4 DAAMGE");
+        }
+        else
+        {
+            Debug.Log("COULNDT BLEED");
+        }
+        turnController.ReadyUp();
+        Debug.Log(Damage);
+    }
+    public void BashDamage(GameObject target)
+    {
+        int AbilityDamage = Random.Range(2, 5);
+        int Damage = stats.BaseDamage + AbilityDamage;
+        stats.Health -= Damage;
+        int StunChance = 110;
+        StunChance -= target.GetComponent<Stats>().StunResist;
+        int StunRoll = Random.Range(1, 100);
+        target.GetComponent<Stats>().Health -= Damage;
+        if (target.GetComponent<Stats>().Health <= 0)
+        {
+            Destroy(target);
+        }
+        else if (StunRoll <= StunChance)
+        {
+            //STUN ENEMY
+            stats.IsStunned = true;
+            Debug.Log("STUNNED");
+        }
+        else
+        {
+            Debug.Log("COULNDT STUN");
+        }
+
+        turnController.ReadyUp();
+        Debug.Log(Damage);
+    }
+    public void SpitDamage(GameObject target)
+    {
+        Debug.Log("HE SPAT");
+        int AbilityDamage = Random.Range(1, 5);
+        int Damage = stats.BaseDamage + AbilityDamage;
+        stats.Health -= Damage;
+        int PoisonChance = 40;
+        PoisonChance -= target.GetComponent<Stats>().PoisonResist;
+        int PoisonRoll = Random.Range(1, 100);
+        target.GetComponent<Stats>().Health -= Damage;
+        if (target.GetComponent<Stats>().Health <= 0)
+        {
+            Destroy(target);
+        }
+        else if (PoisonRoll <= PoisonChance)
+        {
+            //Poison enemy
+            stats.BleedDamage += 5;
+            Debug.Log("Blighed FOR 5 DAAMGE");
+        }
+        else
+        {
+            Debug.Log("COULNDT Blight");
+        }
+        turnController.ReadyUp();
+        Debug.Log(Damage);
+    }
 }

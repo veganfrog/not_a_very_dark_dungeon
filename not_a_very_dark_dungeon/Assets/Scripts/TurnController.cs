@@ -76,6 +76,10 @@ public class TurnController : MonoBehaviour
                 yield return new WaitForSeconds(1.0f); // Delay between turns
             }
         }
+        if(team2.Count = 0)
+        {
+                
+        }
 
         // The battle has ended
         Debug.Log("Battle Over!");

@@ -112,9 +112,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: BasicRat
   Health: 9
+  MaxHealth: 9
   BaseDamage: 3
   Speed: 5
   BleedResist: 10
   PoisonResist: 60
   StunResist: 0
+  BleedDamage: 0
+  PoisonDamage: 0
   IsStunned: 0

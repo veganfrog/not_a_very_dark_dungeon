@@ -112,6 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: HWM
   Health: 27
+  MaxHealth: 27
   BaseDamage: 6
   Speed: 4
   BleedResist: 40

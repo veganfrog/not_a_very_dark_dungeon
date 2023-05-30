@@ -809,6 +809,7 @@ GameObject:
   - component: {fileID: 2016341766}
   - component: {fileID: 2016341765}
   - component: {fileID: 2016341772}
+  - component: {fileID: 2016341773}
   m_Layer: 0
   m_Name: Controller (1)
   m_TagString: Untagged
@@ -951,6 +952,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   Health: 0
+  MaxHealth: 0
   BaseDamage: 0
   Speed: 0
   BleedResist: 0
@@ -979,7 +981,6 @@ MonoBehaviour:
   CrusaderReady: 0
   HWMReady: 0
   PlagueReady: 0
-  OccultistReady: 0
   ReadyingSmite: 0
   ReadyingProtectiveLight: 0
   ReadyingAccusativeScroll: 0
@@ -1054,4 +1055,27 @@ Rigidbody:
   - {fileID: 9015312184592562931, guid: addacbf9b0537284685054a879043ee1, type: 3}
   stats: {fileID: 2016341768}
   turnController: {fileID: 2016341765}
+<<<<<<< Updated upstream
 >>>>>>> f3719624eeef53a0871b361b1bdcdc007bd90e0d
+=======
+--- !u!114 &2016341773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016341764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce129a673eb899f44b427ef30181abf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  friendlyCubePrefabs:
+  - {fileID: 7700562553618584264, guid: 28cef9a190f919f46896ad9deb697ba9, type: 3}
+  - {fileID: 378073371480584984, guid: e2187754e4525cc428eddf97b4701dba, type: 3}
+  - {fileID: 9015312184592562931, guid: addacbf9b0537284685054a879043ee1, type: 3}
+  enemyCubePrefabs:
+  - {fileID: 1460871325368646857, guid: f2355e641e016a84c8ad699678056a41, type: 3}
+  - {fileID: 5038942994373966841, guid: 67ccfdd6cce627b418465a90cfa2de91, type: 3}
+  - {fileID: 7451548689917782836, guid: e36d0e7c6836b7146921f54e21493658, type: 3}
+>>>>>>> Stashed changes

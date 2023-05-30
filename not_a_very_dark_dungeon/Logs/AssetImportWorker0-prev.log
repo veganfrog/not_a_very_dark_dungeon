@@ -15,7 +15,11 @@ C:/Users/pelan/OneDrive/Dokumentai/GitHub/not_a_very_dark_dungeon/not_a_very_dar
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
+<<<<<<< Updated upstream
 50046
+=======
+53694
+>>>>>>> Stashed changes
 Successfully changed project path to: C:/Users/pelan/OneDrive/Dokumentai/GitHub/not_a_very_dark_dungeon/not_a_very_dark_dungeon
 C:/Users/pelan/OneDrive/Dokumentai/GitHub/not_a_very_dark_dungeon/not_a_very_dark_dungeon
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +51,19 @@ C:/Users/pelan/OneDrive/Dokumentai/GitHub/not_a_very_dark_dungeon/not_a_very_dar
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
+<<<<<<< Updated upstream
 Player connection [18200] Host "[IP] 192.168.43.2 [Port] 0 [Flags] 2 [Guid] 1211628354 [EditorId] 1211628354 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
 Player connection [18200] Host "[IP] 192.168.43.2 [Port] 0 [Flags] 2 [Guid] 1211628354 [EditorId] 1211628354 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 Refreshing native plugins compatible for Editor in 335.64 ms, found 3 plugins.
+=======
+Player connection [3120] Host "[IP] 192.168.43.2 [Port] 0 [Flags] 2 [Guid] 219501633 [EditorId] 219501633 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [3120] Host "[IP] 192.168.43.2 [Port] 0 [Flags] 2 [Guid] 219501633 [EditorId] 219501633 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 106.76 ms, found 3 plugins.
+>>>>>>> Stashed changes
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.25f1 (68ef2c4f8861)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/Resources/UnitySubsystems
@@ -67,6 +79,7 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/MonoBleedingEdge/etc'
+<<<<<<< Updated upstream
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56432
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
@@ -80,10 +93,26 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (1752ms)
 		BeginReloadAssembly (266ms)
+=======
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56204
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.012112 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 125.94 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.080 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1080ms)
+		BeginReloadAssembly (138ms)
+>>>>>>> Stashed changes
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+<<<<<<< Updated upstream
 			CreateAndSetChildDomain (2ms)
 		EndReloadAssembly (1171ms)
 			LoadAssemblies (259ms)
@@ -99,17 +128,39 @@ Domain Reload Profiling:
 				BeforeProcessingInitializeOnLoad (3ms)
 				ProcessInitializeOnLoadAttributes (366ms)
 				ProcessInitializeOnLoadMethodAttributes (125ms)
+=======
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (759ms)
+			LoadAssemblies (134ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (171ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (44ms)
+			SetupLoadedEditorAssemblies (454ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (126ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (236ms)
+				ProcessInitializeOnLoadMethodAttributes (77ms)
+>>>>>>> Stashed changes
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 Registered in 0.016628 seconds.
+=======
+Registered in 0.010757 seconds.
+>>>>>>> Stashed changes
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\pelan\OneDrive\Dokumentai\GitHub\not_a_very_dark_dungeon\not_a_very_dark_dungeon\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\pelan\OneDrive\Dokumentai\GitHub\not_a_very_dark_dungeon\not_a_very_dark_dungeon\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
+<<<<<<< Updated upstream
 Refreshing native plugins compatible for Editor in 1.43 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
@@ -150,6 +201,48 @@ Unloading 3070 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 22 unused Assets / (56.6 KB). Loaded Objects now: 3533.
 Memory consumption went from 111.0 MB to 110.9 MB.
 Total: 7.761100 ms (FindLiveObjects: 0.783600 ms CreateObjectMapping: 0.715400 ms MarkObjects: 6.089000 ms  DeleteObjects: 0.171000 ms)
+=======
+Refreshing native plugins compatible for Editor in 1.02 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.744 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1745ms)
+		BeginReloadAssembly (215ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (11ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (27ms)
+		EndReloadAssembly (1335ms)
+			LoadAssemblies (165ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (462ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (92ms)
+			SetupLoadedEditorAssemblies (578ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (139ms)
+				ProcessInitializeOnLoadAttributes (378ms)
+				ProcessInitializeOnLoadMethodAttributes (33ms)
+				AfterProcessingInitializeOnLoad (16ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 1.08 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3073 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 22 unused Assets / (56.3 KB). Loaded Objects now: 3536.
+Memory consumption went from 111.1 MB to 111.0 MB.
+Total: 13.743300 ms (FindLiveObjects: 0.532100 ms CreateObjectMapping: 0.726200 ms MarkObjects: 12.325700 ms  DeleteObjects: 0.156900 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -163,6 +256,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
+<<<<<<< Updated upstream
   Time since last request: 5672.505011 seconds.
   path: Assets/Prefabs/BasicRat.prefab
   artifactKey: Guid(f2355e641e016a84c8ad699678056a41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
@@ -1241,3 +1335,9 @@ Symbol file LoadedFromMemory doesn't match image C:\Users\pelan\OneDrive\Dokumen
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 1.02 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
+=======
+  Time since last request: 191114.290475 seconds.
+  path: Assets/Scripts/EnemyAbilities.cs
+  artifactKey: Guid(97c691cc98001324f9c54e3c4bf02f34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EnemyAbilities.cs using Guid(97c691cc98001324f9c54e3c4bf02f34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cdba6c3e386d5e659b15de1fb123d07') in 0.116253 seconds 
+>>>>>>> Stashed changes

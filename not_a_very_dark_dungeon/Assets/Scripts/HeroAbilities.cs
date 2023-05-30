@@ -24,7 +24,6 @@ public class HeroAbilities : MonoBehaviour
     public bool CrusaderReady = false;
     public bool HWMReady = false;
     public bool PlagueReady = false;
-    public bool OccultistReady = false;
     
     //Crusader attack status
     public bool ReadyingSmite = false;
@@ -92,8 +91,6 @@ public class HeroAbilities : MonoBehaviour
         TurnController.ReadyUp();
             Debug.Log(Damage);
         }
-        
-    
         public  void AccusativeScroll(GameObject clickedObject1, GameObject clickedObject2)
         {
         // damages  first two enemies
@@ -214,18 +211,7 @@ public class HeroAbilities : MonoBehaviour
                     Debug.Log("NOT READYING PLAGUE DOCTOR FOR ATTACK");
                 }
                 break;
-            case 4:
-                if (!OccultistReady)
-                {
-                    OccultistReady = true;
-                    Debug.Log("READYING OCCULTIST FOR ATTACK");
-                }
-                else if (OccultistReady)
-                {
-                    OccultistReady = false;
-                    Debug.Log("NOT READYING OCCULTIST FOR ATTACK");
-                }
-                break;
+   
         }
     }
     //SELECTING CRUSADERS ATTACK
@@ -266,12 +252,20 @@ public class HeroAbilities : MonoBehaviour
                 if (CrusaderReady && !ReadyingStunningStrike)
                 {
                     ReadyingStunningStrike = true;
+<<<<<<< Updated upstream
                     Debug.Log("READYING STUNNING STRIKE");
+=======
+                    Debug.Log("READYING ACCUSATIVE SCROLL");
+>>>>>>> Stashed changes
                 }
                 else if (CrusaderReady && ReadyingStunningStrike)
                 {
                     ReadyingStunningStrike = false;
+<<<<<<< Updated upstream
                     Debug.Log("NOT READYING STUNNING STRIKE");
+=======
+                    Debug.Log("NOT READYING ACCUSATIVE SCROLL");
+>>>>>>> Stashed changes
                 }
 
                 break;

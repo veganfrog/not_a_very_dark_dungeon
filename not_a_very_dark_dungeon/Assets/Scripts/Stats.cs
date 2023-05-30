@@ -8,6 +8,7 @@ public class Stats : MonoBehaviour
 
     public string Name;
     public int Health;
+    public int MaxHealth;
     public int BaseDamage;
     public int Speed;
     public int BleedResist;

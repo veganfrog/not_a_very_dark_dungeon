@@ -112,9 +112,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Slime
   Health: 15
+  MaxHealth: 18
   BaseDamage: 4
   Speed: 2
   BleedResist: 60
   PoisonResist: 40
   StunResist: 0
+  BleedDamage: 0
+  PoisonDamage: 0
   IsStunned: 0

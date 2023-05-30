@@ -112,9 +112,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Dog
   Health: 15
+  MaxHealth: 15
   BaseDamage: 5
   Speed: 7
   BleedResist: 0
   PoisonResist: 0
   StunResist: 0
+  BleedDamage: 0
+  PoisonDamage: 0
   IsStunned: 0

@@ -111,9 +111,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Crusader
-  Health: 27
+  Health: 34
+  MaxHealth: 34
   BaseDamage: 5
-  Speed: 2
+  Speed: 20
   BleedResist: 60
   PoisonResist: 40
   StunResist: 50
