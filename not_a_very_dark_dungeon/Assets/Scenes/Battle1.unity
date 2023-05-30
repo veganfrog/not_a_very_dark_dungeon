@@ -732,6 +732,10 @@ GameObject:
   - component: {fileID: 506470465}
   - component: {fileID: 506470464}
   - component: {fileID: 506470463}
+<<<<<<< HEAD
+=======
+  - component: {fileID: 506470471}
+>>>>>>> 28190a5b5c053ed0cd5565da456b2115204f2421
   - component: {fileID: 506470470}
   m_Layer: 0
   m_Name: Controller
@@ -770,7 +774,11 @@ MonoBehaviour:
   stats: {fileID: 506470464}
   heroAbilities: {fileID: 506470466}
   enemyAbilities: {fileID: 506470469}
+<<<<<<< HEAD
   gameOver: {fileID: 0}
+=======
+  gameOver: {fileID: 506470471}
+>>>>>>> 28190a5b5c053ed0cd5565da456b2115204f2421
   team1:
   - {fileID: 7700562553618584264, guid: 28cef9a190f919f46896ad9deb697ba9, type: 3}
   - {fileID: 378073371480584984, guid: e2187754e4525cc428eddf97b4701dba, type: 3}
@@ -837,7 +845,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TurnController: {fileID: 506470463}
   stats: {fileID: 506470464}
+<<<<<<< HEAD
   controller: {fileID: 506470470}
+=======
+  UIcontroller: {fileID: 506470470}
+>>>>>>> 28190a5b5c053ed0cd5565da456b2115204f2421
   IsTurn: 0
   CrusaderReady: 0
   HWMReady: 0
@@ -915,6 +927,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 506470461}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: 3037384d8bd858f4fbedf87a579c8824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -960,11 +973,21 @@ RectTransform:
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &611617110
+=======
+  m_Script: {fileID: 11500000, guid: 46121ef754582194f910a8d7caccc390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crusaderAbilities: {fileID: 5930685038275513711, guid: 6cee12b274312ea4185aabfab8522984, type: 3}
+  hwmAbilities: {fileID: 4187734992548940476, guid: f3d2fb878ece315478eb5f2a82ce1fdc, type: 3}
+  plaguedoctorAbilities: {fileID: 745088104492400985, guid: 58a17c915faddce47b4487e027e74db7, type: 3}
+--- !u!114 &506470471
+>>>>>>> 28190a5b5c053ed0cd5565da456b2115204f2421
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 611617108}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -3394,6 +3417,14 @@ RectTransform:
   m_AnchoredPosition: {x: -409.9, y: -106.5}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+=======
+  m_GameObject: {fileID: 506470461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95cb2af4f07da5e4caa6ab20a261eba6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> 28190a5b5c053ed0cd5565da456b2115204f2421
 --- !u!1 &2010517965
 GameObject:
   m_ObjectHideFlags: 0
