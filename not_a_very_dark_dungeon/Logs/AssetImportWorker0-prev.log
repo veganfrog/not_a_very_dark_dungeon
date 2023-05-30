@@ -15,7 +15,7 @@ C:/Users/pelan/OneDrive/Dokumentai/GitHub/not_a_very_dark_dungeon/not_a_very_dar
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-54524
+54430
 Successfully changed project path to: C:/Users/pelan/OneDrive/Dokumentai/GitHub/not_a_very_dark_dungeon/not_a_very_dark_dungeon
 C:/Users/pelan/OneDrive/Dokumentai/GitHub/not_a_very_dark_dungeon/not_a_very_dark_dungeon
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ C:/Users/pelan/OneDrive/Dokumentai/GitHub/not_a_very_dark_dungeon/not_a_very_dar
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [23992] Host "[IP] 192.168.43.2 [Port] 0 [Flags] 2 [Guid] 1743035773 [EditorId] 1743035773 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [3304] Host "[IP] 192.168.43.2 [Port] 0 [Flags] 2 [Guid] 1933613771 [EditorId] 1933613771 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [23992] Host "[IP] 192.168.43.2 [Port] 0 [Flags] 2 [Guid] 1743035773 [EditorId] 1743035773 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [3304] Host "[IP] 192.168.43.2 [Port] 0 [Flags] 2 [Guid] 1933613771 [EditorId] 1933613771 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 133.39 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 148.92 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.25f1 (68ef2c4f8861)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/Resources/UnitySubsystems
@@ -67,89 +67,89 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56740
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56196
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.020442 seconds.
+Registered in 0.018242 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 146.53 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 136.25 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.429 seconds
+- Completed reload, in  1.371 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1430ms)
-		BeginReloadAssembly (191ms)
+	ReloadAssembly (1372ms)
+		BeginReloadAssembly (184ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (2ms)
-		EndReloadAssembly (997ms)
-			LoadAssemblies (181ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (960ms)
+			LoadAssemblies (179ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (260ms)
+			SetupTypeCache (246ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (58ms)
-			SetupLoadedEditorAssemblies (564ms)
+			RebuildScriptCaches (59ms)
+			SetupLoadedEditorAssemblies (541ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (14ms)
+				InitializePlatformSupportModulesInManaged (16ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (147ms)
-				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (306ms)
-				ProcessInitializeOnLoadMethodAttributes (95ms)
+				RefreshPlugins (136ms)
+				BeforeProcessingInitializeOnLoad (3ms)
+				ProcessInitializeOnLoadAttributes (288ms)
+				ProcessInitializeOnLoadMethodAttributes (98ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.014564 seconds.
+Registered in 0.012333 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\pelan\OneDrive\Dokumentai\GitHub\not_a_very_dark_dungeon\not_a_very_dark_dungeon\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\pelan\OneDrive\Dokumentai\GitHub\not_a_very_dark_dungeon\not_a_very_dark_dungeon\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.06 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.72 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.326 seconds
+- Completed reload, in  2.031 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2328ms)
-		BeginReloadAssembly (255ms)
+	ReloadAssembly (2033ms)
+		BeginReloadAssembly (258ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (14ms)
+			DisableScriptedObjects (25ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (34ms)
-		EndReloadAssembly (1796ms)
-			LoadAssemblies (192ms)
+			CreateAndSetChildDomain (32ms)
+		EndReloadAssembly (1523ms)
+			LoadAssemblies (183ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (645ms)
+			SetupTypeCache (558ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (125ms)
-			SetupLoadedEditorAssemblies (764ms)
+			RebuildScriptCaches (93ms)
+			SetupLoadedEditorAssemblies (655ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (14ms)
+				InitializePlatformSupportModulesInManaged (9ms)
 				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (173ms)
-				ProcessInitializeOnLoadAttributes (510ms)
-				ProcessInitializeOnLoadMethodAttributes (44ms)
-				AfterProcessingInitializeOnLoad (20ms)
+				BeforeProcessingInitializeOnLoad (158ms)
+				ProcessInitializeOnLoadAttributes (435ms)
+				ProcessInitializeOnLoadMethodAttributes (35ms)
+				AfterProcessingInitializeOnLoad (15ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (13ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 0.90 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 1.29 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3074 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 22 unused Assets / (56.4 KB). Loaded Objects now: 3537.
-Memory consumption went from 111.1 MB to 111.1 MB.
-Total: 4.867000 ms (FindLiveObjects: 0.350900 ms CreateObjectMapping: 0.315200 ms MarkObjects: 4.092000 ms  DeleteObjects: 0.107600 ms)
+Unloading 22 unused Assets / (56.3 KB). Loaded Objects now: 3537.
+Memory consumption went from 111.1 MB to 111.0 MB.
+Total: 4.920300 ms (FindLiveObjects: 0.502000 ms CreateObjectMapping: 0.418000 ms MarkObjects: 3.851400 ms  DeleteObjects: 0.147300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -163,23 +163,73 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 195081.008885 seconds.
-  path: Assets/Prefabs/Enemies
-  artifactKey: Guid(9852cd38536a61f478e6751bcec0dce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies using Guid(9852cd38536a61f478e6751bcec0dce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '880b9145987e7c881d47c60f29a0dea1') in 0.020182 seconds 
+  Time since last request: 194684.597221 seconds.
+  path: Assets/Sprites/knight.png
+  artifactKey: Guid(91d0d66e9206be24bac608bc15e950f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/knight.png using Guid(91d0d66e9206be24bac608bc15e950f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '749ebd89fb7fb42cf5dc02ed0e26f822') in 0.279614 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/Prefabs/Friendlies/PlagueDoctor.prefab
-  artifactKey: Guid(addacbf9b0537284685054a879043ee1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Friendlies/PlagueDoctor.prefab using Guid(addacbf9b0537284685054a879043ee1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5437deaa292e4868aa8b79d3f1946941') in 0.269383 seconds 
+  Time since last request: 0.000035 seconds.
+  path: Assets/Scripts/EnemyAbilities.cs
+  artifactKey: Guid(97c691cc98001324f9c54e3c4bf02f34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EnemyAbilities.cs using Guid(97c691cc98001324f9c54e3c4bf02f34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afbf82ae5b59ed3dda0313f8ac95f16a') in 0.025136 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 12.018001 seconds.
-  path: Assets/Prefabs/Enemies/DiseasedDog.prefab
-  artifactKey: Guid(67ccfdd6cce627b418465a90cfa2de91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies/DiseasedDog.prefab using Guid(67ccfdd6cce627b418465a90cfa2de91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fe86b3f3e8d2c7d1f75e568184f8959') in 0.023566 seconds 
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+  Time since last request: 99.895705 seconds.
+  path: Assets/Scenes/GameOver.unity
+  artifactKey: Guid(39272d138ffdebc4ba1f5d68e04622e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/GameOver.unity using Guid(39272d138ffdebc4ba1f5d68e04622e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed6a7aee1d8c4572616f93bdd917cb6d') in 0.005431 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.366399 seconds.
+  path: Assets/Prefabs/UI
+  artifactKey: Guid(78204f8f45e65dc4c91c9aaf2b4f7f3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI using Guid(78204f8f45e65dc4c91c9aaf2b4f7f3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13d77c61bac238c8d8df3dc4a947b751') in 0.011466 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.106305 seconds.
+  path: Assets/Prefabs/UI/CrusaderAbilities.prefab
+  artifactKey: Guid(6cee12b274312ea4185aabfab8522984) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/CrusaderAbilities.prefab using Guid(6cee12b274312ea4185aabfab8522984) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68e465b99fca50b1967b22d22c207922') in 0.097606 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Prefabs/UI/PlagueDocAbilities.prefab
+  artifactKey: Guid(58a17c915faddce47b4487e027e74db7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/PlagueDocAbilities.prefab using Guid(58a17c915faddce47b4487e027e74db7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '765e0928654b7f14473e200d75fd4bc9') in 0.048403 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.471704 seconds.
+  path: Assets/Scenes/Hallway.unity
+  artifactKey: Guid(2af8873b19a7d214aa8b750c38673d4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Hallway.unity using Guid(2af8873b19a7d214aa8b750c38673d4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd04a6e60d4711dacd2969e6f81faaa5') in 0.007660 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.011961 seconds.
+  path: Assets/Prefabs/Enemies/BasicRat.prefab
+  artifactKey: Guid(f2355e641e016a84c8ad699678056a41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Enemies/BasicRat.prefab using Guid(f2355e641e016a84c8ad699678056a41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b381373503604008fc2211fa16215724') in 0.071598 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Prefabs/Enemies/Slime.prefab
+  artifactKey: Guid(e36d0e7c6836b7146921f54e21493658) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Enemies/Slime.prefab using Guid(e36d0e7c6836b7146921f54e21493658) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3766383023f956447d9084a0f4cea60a') in 0.040434 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.222354 seconds.
+  path: Assets/Scenes/Battle1.unity
+  artifactKey: Guid(6bb9d298af005c64bb8c2489ce152df9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Battle1.unity using Guid(6bb9d298af005c64bb8c2489ce152df9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c94cec65d993ebaeca8b8d31854ba419') in 0.017924 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 61.929421 seconds.
+  path: Assets/Scripts/EnemyBattlePositions.cs
+  artifactKey: Guid(ad048e9338eff2e40b33f7e14e7afbf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EnemyBattlePositions.cs using Guid(ad048e9338eff2e40b33f7e14e7afbf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbe5130d0f49a855fd108e3d300dd732') in 0.016573 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.176064 seconds.
+  path: Assets/Scripts/FriendlyBattlePositions.cs
+  artifactKey: Guid(c64f77f5d9b79f743b2b6e888366cabf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/FriendlyBattlePositions.cs using Guid(c64f77f5d9b79f743b2b6e888366cabf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f215e5b6b03fc37806b5effa241dc85') in 0.014822 seconds 

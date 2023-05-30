@@ -82,15 +82,8 @@ public class TurnController : MonoBehaviour
         {
             gameOver.IsGameOver();
         }
-        else if (SceneManager.GetActiveScene().buildIndex == 2)
-        {
+        else
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
-        else if (SceneManager.GetActiveScene().buildIndex == 4)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
-        }
-
 
 
         // The battle has ended
