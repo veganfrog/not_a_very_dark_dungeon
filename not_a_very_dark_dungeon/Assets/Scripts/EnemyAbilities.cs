@@ -317,7 +317,7 @@ public class EnemyAbilities : MonoBehaviour
         else if (PoisonRoll <= PoisonChance)
         {
             //Poison enemy
-            stats.BleedDamage += 5;
+            stats.PoisonDamage += 5;
             Debug.Log("Blighed FOR 5 DAAMGE");
         }
         else

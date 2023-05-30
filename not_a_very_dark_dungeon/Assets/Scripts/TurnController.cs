@@ -16,7 +16,6 @@ public class TurnController : MonoBehaviour
     // Start the battle
     private void Start()
     {
-        Debug.Log("STARTED");
         StartCoroutine(StartBattle());
     }
 
@@ -44,23 +43,29 @@ public class TurnController : MonoBehaviour
             {
                 GameObject currentCharacter = allCharacters[i];
 
-                // Check if the character is still alive
                 if (!IsAlive(currentCharacter))
                     continue;
 
-                // Determine the target team
                 List<GameObject> targetTeam = (team1.Contains(currentCharacter)) ? team2 : team1;
 
-                // Choose a random target from the opposing team
                 GameObject target = targetTeam[Random.Range(0, targetTeam.Count)];
-
-                // Set the readiness boolean for the current character
-                SetReadiness(currentCharacter);
 
                 if (currentCharacter.GetComponent<Stats>().BleedDamage > 0 || currentCharacter.GetComponent<Stats>().PoisonDamage > 0)
                 {
                     stats.DOTDamage(currentCharacter);
                 }
+                if (currentCharacter.GetComponent<Stats>().IsStunned == true)
+                {
+                    stats.IsStunned = false;
+                    Debug.Log("Skipped turn");
+                    goto amongus;
+                    
+                }
+                // Set the readiness boolean for the current character
+                SetReadiness(currentCharacter);
+
+                
+
                 // Attack the target
 
                 // Wait until the character finishes attacking
@@ -69,7 +74,7 @@ public class TurnController : MonoBehaviour
                     yield return null;
                 }
                 IsReady = false;
-
+                amongus:
 
                 // Check if the target is defeated
                 if (!IsAlive(target))

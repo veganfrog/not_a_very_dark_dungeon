@@ -7,10 +7,10 @@ public class EnemyBattlePositions : MonoBehaviour
 {
     public HeroAbilities HeroAbilities;
     public GameObject[] enemyCubePrefabs;
-    public Transform[] enemyPositions; 
-    private GameObject[] enemyCubes; 
+    public Transform[] enemyPositions;
+    private GameObject[] enemyCubes;
 
-   
+
     void Start()
     {
         enemyCubes = new GameObject[enemyPositions.Length];
@@ -45,6 +45,7 @@ public class EnemyBattlePositions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Crusader
         if (HeroAbilities.ReadyingSmite && Input.GetMouseButtonDown(0))
         {
             int i = 1;
@@ -63,7 +64,42 @@ public class EnemyBattlePositions : MonoBehaviour
             StunningStrikeEnemy();
             HeroAbilities.SelectingAttacker(i);
         }
+        //HWM
+        if (HeroAbilities.ReadyingPistolShot && Input.GetMouseButtonDown(0))
+        {
+            int i = 2;
+            PistolShotEnemy();
+            HeroAbilities.SelectingAttacker(i);
+        }
+        if (HeroAbilities.ReadyingGrapeshotBlast && Input.GetMouseButtonDown(0))
+        {
+            int i = 2;
+            GrapeshotBlastEnemy();
+            HeroAbilities.SelectingAttacker(i);
+        }
+        if (HeroAbilities.ReadyingSlash && Input.GetMouseButtonDown(0))
+        {
+            int i = 2;
+            SlashEnemy();
+            HeroAbilities.SelectingAttacker(i);
+        }
+        //Plague
+        if (HeroAbilities.ReadyingPistolShot && Input.GetMouseButtonDown(0))
+        {
+            int i = 3;
+           StunningBombEnemy();
+            HeroAbilities.SelectingAttacker(i);
+        }
+        if (HeroAbilities.ReadyingGrapeshotBlast && Input.GetMouseButtonDown(0))
+        {
+            int i = 3;
+            PlagueBombEnemy();
+            HeroAbilities.SelectingAttacker(i);
+        }
+        
+
     }
+    //CRUSADER ABILITIES
     private void SmiteEnemy()
     {
 
@@ -83,35 +119,46 @@ public class EnemyBattlePositions : MonoBehaviour
     }
     private void AccusativeScrollEnemy()
     {
-        if (enemyCubes[0] != null && enemyCubes[1] != null)
-        {
-            Debug.Log("HIT BOTH ENEMIES");
-            GameObject ClickedObject1, ClickedObject2;
-            ClickedObject1 = enemyCubes[0];
-            ClickedObject2 = enemyCubes[1];
-            HeroAbilities.AccusativeScroll(ClickedObject1, ClickedObject2);
-        }
-        else if (enemyCubes[0] != null && enemyCubes[1] == null)
-        {
-            Debug.Log("HIT FIRST ENEMY");
-            GameObject ClickedObject1, ClickedObject2;
-            ClickedObject1 = enemyCubes[0];
-            ClickedObject2 = null;
-            HeroAbilities.AccusativeScroll(ClickedObject1, ClickedObject2);
-        }
-        else if (enemyCubes[0] == null && enemyCubes[1] != null)
-        {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
 
-            Debug.Log("HIT SECOND ENEMY");
-            GameObject ClickedObject1, ClickedObject2;
-            ClickedObject1 = null;
-            ClickedObject2 = enemyCubes[1];
-            HeroAbilities.AccusativeScroll(ClickedObject1, ClickedObject2);
-        }
-        else
+        if (Physics.Raycast(ray, out hit))
         {
-            Debug.Log("BOTH ENEMIES ARE DEAD");
+            Debug.Log("hit");
+            GameObject clickedObject = hit.collider.gameObject;
+            Vector3 clickedPosition = hit.collider.transform.position;
+
+            if (enemyCubes[0] != null && enemyCubes[1] != null)
+            {
+                Debug.Log("HIT BOTH ENEMIES");
+                GameObject ClickedObject1, ClickedObject2;
+                ClickedObject1 = enemyCubes[0];
+                ClickedObject2 = enemyCubes[1];
+                HeroAbilities.AccusativeScroll(ClickedObject1, ClickedObject2);
+            }
+            else if (enemyCubes[0] != null && enemyCubes[1] == null)
+            {
+                Debug.Log("HIT FIRST ENEMY");
+                GameObject ClickedObject1, ClickedObject2;
+                ClickedObject1 = enemyCubes[0];
+                ClickedObject2 = null;
+                HeroAbilities.AccusativeScroll(ClickedObject1, ClickedObject2);
+            }
+            else if (enemyCubes[0] == null && enemyCubes[1] != null)
+            {
+
+                Debug.Log("HIT SECOND ENEMY");
+                GameObject ClickedObject1, ClickedObject2;
+                ClickedObject1 = null;
+                ClickedObject2 = enemyCubes[1];
+                HeroAbilities.AccusativeScroll(ClickedObject1, ClickedObject2);
+            }
+            else
+            {
+                Debug.Log("BOTH ENEMIES ARE DEAD");
+            }
         }
+
 
 
 
@@ -129,6 +176,153 @@ public class EnemyBattlePositions : MonoBehaviour
 
             // Debug.Log("Clicked Object: " + clickedObject.name + " - Position: " + clickedPosition);
             HeroAbilities.StunningStrike(clickedObject);
+        }
+    }
+    //HWM ABILITIES
+    private void PistolShotEnemy()
+    {
+
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            Debug.Log("hit");
+            GameObject clickedObject = hit.collider.gameObject;
+            Vector3 clickedPosition = hit.collider.transform.position;
+
+            // Debug.Log("Clicked Object: " + clickedObject.name + " - Position: " + clickedPosition);
+            HeroAbilities.PistolShot(clickedObject);
+        }
+
+    }
+    private void GrapeshotBlastEnemy()
+    {
+
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            Debug.Log("hit");
+            GameObject clickedObject = hit.collider.gameObject;
+            Vector3 clickedPosition = hit.collider.transform.position;
+
+            if (enemyCubes[0] != null && enemyCubes[1] != null && enemyCubes[2] != null)
+            {
+                Debug.Log("HIT ALL ENEMIES");
+                GameObject ClickedObject1, ClickedObject2, ClickedObject3;
+                ClickedObject1 = enemyCubes[0];
+                ClickedObject2 = enemyCubes[1];
+                ClickedObject3 = enemyCubes[2];
+                HeroAbilities.GrapeshotBlast(ClickedObject1, ClickedObject2, ClickedObject3);
+            }
+            else if (enemyCubes[0] != null && enemyCubes[1] == null && enemyCubes[2] != null)
+            {
+
+                GameObject ClickedObject1, ClickedObject2, ClickedObject3;
+                ClickedObject1 = enemyCubes[0];
+                ClickedObject2 = enemyCubes[1];
+                ClickedObject3 = null;
+                HeroAbilities.GrapeshotBlast(ClickedObject1, ClickedObject2, ClickedObject3);
+            }
+            else if (enemyCubes[0] != null && enemyCubes[1] != null && enemyCubes[2] == null)
+            {
+
+                GameObject ClickedObject1, ClickedObject2, ClickedObject3;
+                ClickedObject1 = enemyCubes[0];
+                ClickedObject2 = null;
+                ClickedObject3 = enemyCubes[2];
+                HeroAbilities.GrapeshotBlast(ClickedObject1, ClickedObject2, ClickedObject3);
+            }
+            else if (enemyCubes[0] == null && enemyCubes[1] != null && enemyCubes[2] != null)
+            {
+                GameObject ClickedObject1, ClickedObject2, ClickedObject3;
+                ClickedObject1 = null;
+                ClickedObject2 = enemyCubes[1];
+                ClickedObject3 = enemyCubes[2];
+                HeroAbilities.GrapeshotBlast(ClickedObject1, ClickedObject2, ClickedObject3);
+            }
+            else if (enemyCubes[0] != null && enemyCubes[1] == null && enemyCubes[2] == null)
+            {
+
+                GameObject ClickedObject1, ClickedObject2, ClickedObject3;
+                ClickedObject1 = enemyCubes[0];
+                ClickedObject2 = null;
+                ClickedObject3 = null;
+                HeroAbilities.GrapeshotBlast(ClickedObject1, ClickedObject2, ClickedObject3);
+            }
+            else if (enemyCubes[0] == null && enemyCubes[1] != null && enemyCubes[2] == null)
+            {
+
+                GameObject ClickedObject1, ClickedObject2, ClickedObject3;
+                ClickedObject1 = null;
+                ClickedObject2 = enemyCubes[1];
+                ClickedObject3 = null;
+                HeroAbilities.GrapeshotBlast(ClickedObject1, ClickedObject2, ClickedObject3);
+            }
+            else if (enemyCubes[0] == null && enemyCubes[1] == null && enemyCubes[2] != null)
+            {
+
+                GameObject ClickedObject1, ClickedObject2, ClickedObject3;
+                ClickedObject1 = null;
+                ClickedObject2 = null;
+                ClickedObject3 = enemyCubes[2];
+                HeroAbilities.GrapeshotBlast(ClickedObject1, ClickedObject2, ClickedObject3);
+            }
+            else
+                Debug.Log("Everyone is dead");
+        }
+
+
+
+
+
+    }
+    private void SlashEnemy()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            Debug.Log("hit");
+            GameObject clickedObject = hit.collider.gameObject;
+            Vector3 clickedPosition = hit.collider.transform.position;
+
+            // Debug.Log("Clicked Object: " + clickedObject.name + " - Position: " + clickedPosition);
+            HeroAbilities.Smite(clickedObject);
+        }
+    }
+    // Plague Doctor
+    private void StunningBombEnemy()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            Debug.Log("hit");
+            GameObject clickedObject = hit.collider.gameObject;
+            Vector3 clickedPosition = hit.collider.transform.position;
+
+
+            HeroAbilities.StunningBomb(clickedObject);
+        }
+    }
+    private void PlagueBombEnemy()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            Debug.Log("hit");
+            GameObject clickedObject = hit.collider.gameObject;
+            Vector3 clickedPosition = hit.collider.transform.position;
+
+
+            HeroAbilities.PlagueBomb(clickedObject);
         }
     }
 }

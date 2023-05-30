@@ -43,16 +43,17 @@ public class FriendlyBattlePositions : MonoBehaviour
 
     void Update()
     {
-        //CRUSADER SUPPORT ABILITIES
-       /* if (HeroAbilities.ReadyingProtectiveLight && Input.GetMouseButtonDown(0))
+       
+        if (HeroAbilities.ReadyingBattleMedicine && Input.GetMouseButtonDown(0))
         {
-            int i = 1;
-            ProtectiveLightFriend();
+            int i = 3;
+            BattleMedicineFriend();
             HeroAbilities.SelectingAttacker(i);
-        }*/
+        }
+
     }
-    //CRUSADER SUPPORT ABILITIES
-    /*private void ProtectiveLightFriend()
+
+    private void BattleMedicineFriend()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
@@ -63,8 +64,7 @@ public class FriendlyBattlePositions : MonoBehaviour
             GameObject clickedObject = hit.collider.gameObject;
             Vector3 clickedPosition = hit.collider.transform.position;
 
-            // Debug.Log("Clicked Object: " + clickedObject.name + " - Position: " + clickedPosition);
-            HeroAbilities.ProtectiveLight(clickedObject);
+            HeroAbilities.BattleMedicine(clickedObject);
         }
-    }*/
+    }
 }
