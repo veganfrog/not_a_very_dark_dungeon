@@ -10,11 +10,11 @@ public class HeroAbilities : MonoBehaviour
 {
   //TODO : MAKE IT SO THAT YOU CANT EXIT OUT OF A CHARACTER WHILE DOING AN ATTACK
 
-    //Enemy stat blocks
+    public TurnController TurnController;
+    // stat blocks
     public Stats stats;
 
-    //Friendly stat blocks 
-    public CrusaderScript crusaderscript;
+
     //in game enemy and friendly objects
     public GameObject Crusader;
     public GameObject Enemy1;
@@ -51,7 +51,7 @@ public class HeroAbilities : MonoBehaviour
         //ATTACKS
 
             //CRUSADERS ATTACKS
-            if (CrusaderReady && (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.R)))
+            if (CrusaderReady && (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.E)))
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {
@@ -68,11 +68,6 @@ public class HeroAbilities : MonoBehaviour
                 int i = 3;
                 SelectingCrusadersAttack(i);
             }
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                int i = 4;
-                SelectingCrusadersAttack(i);
-            }
 
         }
 
@@ -87,26 +82,24 @@ public class HeroAbilities : MonoBehaviour
         public void Smite(GameObject clickedObject)
         {
             int AbilityDamage = Range(4, 10);
-            int Damage = crusaderscript.BaseDamage + AbilityDamage ;
+            int Damage = stats.BaseDamage + AbilityDamage ;
             stats.Health -= Damage ;
             clickedObject.GetComponent<Stats>().Health -= Damage;
             if (clickedObject.GetComponent<Stats>().Health <= 0)
             {
                 Destroy(clickedObject);
             }
-        
+        TurnController.ReadyUp();
             Debug.Log(Damage);
         }
-        public  void ProtectiveLight(GameObject clickedObject)
-        {
-            // gives 50% defense bonus for one attack
-        }
+        
+    
         public  void AccusativeScroll(GameObject clickedObject1, GameObject clickedObject2)
         {
         // damages  first two enemies
 
         int AbilityDamage = Range(2, 6  );
-        int Damage = crusaderscript.BaseDamage + AbilityDamage;
+        int Damage = stats.BaseDamage + AbilityDamage;
         if (clickedObject1 != null && clickedObject2 != null)
         {
             Debug.Log("HIT BOTH ENEMIES");
@@ -142,7 +135,7 @@ public class HeroAbilities : MonoBehaviour
                 Destroy(clickedObject2);
             }
         }
-        
+        TurnController.ReadyUp();
 
 
     }
@@ -150,7 +143,7 @@ public class HeroAbilities : MonoBehaviour
         {
         // attemps to stun one enemy
         int AbilityDamage = Range(2, 4);
-        int Damage = crusaderscript.BaseDamage + AbilityDamage;
+        int Damage = stats.BaseDamage + AbilityDamage;
         stats.Health -= Damage;
         int StunChance = 90;
         StunChance -= clickedObject.GetComponent<Stats>().StunResist;
@@ -172,7 +165,7 @@ public class HeroAbilities : MonoBehaviour
         
 
         Debug.Log(Damage);
-
+        TurnController.ReadyUp();
 
     }
 
@@ -253,22 +246,9 @@ public class HeroAbilities : MonoBehaviour
                         Debug.Log("NOT READYING SMITE");
                     }
                 break;
-            //PROTECTIVE LIGHT
-            case 2:
-                if (CrusaderReady && !ReadyingProtectiveLight)
-                {
-                    ReadyingProtectiveLight = true;
-                    Debug.Log("READYING PROTECTIVE LIGHT");
-                }
-                else if (CrusaderReady && ReadyingProtectiveLight)
-                {
-                    ReadyingProtectiveLight = false;
-                    Debug.Log("NOT READYING PROTECTIVE LIGHT");
-                }
-                break;
 
             //ACCUSATIVE SCROLL
-            case 3:
+            case 2:
 
                 if (CrusaderReady && !ReadyingAccusativeScroll)
                 {
@@ -282,7 +262,7 @@ public class HeroAbilities : MonoBehaviour
                 }
                 break;
             //STUNNING STRIKE
-            case 4:
+            case 3:
                 if (CrusaderReady && !ReadyingStunningStrike)
                 {
                     ReadyingStunningStrike = true;

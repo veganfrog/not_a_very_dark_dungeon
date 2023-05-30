@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac5d5b00af4c2b478f843b1582da7af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: Dog
   Health: 15
   BaseDamage: 5
   Speed: 7

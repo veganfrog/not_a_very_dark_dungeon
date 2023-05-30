@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8944737773394819798}
   m_Layer: 0
   m_Name: PlagueDoctor
-  m_TagString: Friendly
+  m_TagString: Plague Doctor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,10 +110,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac5d5b00af4c2b478f843b1582da7af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 20
+  Name: Plague Doctor
+  Health: 18
   BaseDamage: 4
   Speed: 5
   BleedResist: 30
   PoisonResist: 80
   StunResist: 20
+  BleedDamage: 0
+  PoisonDamage: 0
   IsStunned: 0
