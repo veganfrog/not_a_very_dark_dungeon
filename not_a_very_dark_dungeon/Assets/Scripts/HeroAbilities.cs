@@ -236,7 +236,7 @@ public class HeroAbilities : MonoBehaviour
         }
     }
     //SELECTING CRUSADERS ATTACK
-    private void SelectingCrusadersAttack(int i )
+    public void SelectingCrusadersAttack(int i )
     {
         switch (i) {
             //SMITE
@@ -285,13 +285,13 @@ public class HeroAbilities : MonoBehaviour
             case 4:
                 if (CrusaderReady && !ReadyingStunningStrike)
                 {
-                    ReadyingAccusativeScroll = true;
-                    Debug.Log("READYING ACCUSATIVE SCROLL");
+                    ReadyingStunningStrike = true;
+                    Debug.Log("READYING STUNNING STRIKE");
                 }
                 else if (CrusaderReady && ReadyingStunningStrike)
                 {
-                    ReadyingAccusativeScroll = false;
-                    Debug.Log("NOT READYING ACCUSATIVE SCROLL");
+                    ReadyingStunningStrike = false;
+                    Debug.Log("NOT READYING STUNNING STRIKE");
                 }
 
                 break;
