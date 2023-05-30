@@ -6,15 +6,30 @@ using UnityEngine;
 public class Stats : MonoBehaviour
 {
 
-    
+    public string Name;
     public int Health;
     public int BaseDamage;
     public int Speed;
     public int BleedResist;
     public int PoisonResist;
     public int StunResist;
+    public int BleedDamage;
+    public int PoisonDamage;
     public bool IsStunned;
     
+    public void DOTDamage(GameObject currentCharacter)
+    {
+        if (BleedDamage != 0)
+        {
+            currentCharacter.GetComponent<Stats>().Health -= BleedDamage;
+            BleedDamage--;
+        }
+        if(PoisonDamage!= 0) {
+
+            currentCharacter.GetComponent<Stats>().Health -= PoisonDamage;
+            PoisonDamage--;
+        }
+    }
 }
 
 
