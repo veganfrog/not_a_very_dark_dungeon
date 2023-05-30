@@ -116,7 +116,7 @@ public class TurnController : MonoBehaviour
         }
     }
 
-    private bool IsAlive(GameObject character)
+    public bool IsAlive(GameObject character)
     {
         Stats stats = character.GetComponent<Stats>();
         return stats != null && stats.Health > 0;

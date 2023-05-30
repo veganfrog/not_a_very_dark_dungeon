@@ -84,13 +84,13 @@ public class EnemyBattlePositions : MonoBehaviour
             HeroAbilities.SelectingAttacker(i);
         }
         //Plague
-        if (HeroAbilities.ReadyingPistolShot && Input.GetMouseButtonDown(0))
+        if (HeroAbilities.ReadyingStunningBomb && Input.GetMouseButtonDown(0))
         {
             int i = 3;
            StunningBombEnemy();
             HeroAbilities.SelectingAttacker(i);
         }
-        if (HeroAbilities.ReadyingGrapeshotBlast && Input.GetMouseButtonDown(0))
+        if (HeroAbilities.ReadyingPlagueBomb && Input.GetMouseButtonDown(0))
         {
             int i = 3;
             PlagueBombEnemy();
@@ -306,7 +306,6 @@ public class EnemyBattlePositions : MonoBehaviour
             GameObject clickedObject = hit.collider.gameObject;
             Vector3 clickedPosition = hit.collider.transform.position;
 
-
             HeroAbilities.StunningBomb(clickedObject);
         }
     }
@@ -320,7 +319,6 @@ public class EnemyBattlePositions : MonoBehaviour
             Debug.Log("hit");
             GameObject clickedObject = hit.collider.gameObject;
             Vector3 clickedPosition = hit.collider.transform.position;
-
 
             HeroAbilities.PlagueBomb(clickedObject);
         }

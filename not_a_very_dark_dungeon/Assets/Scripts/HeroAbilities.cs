@@ -123,6 +123,9 @@ public class HeroAbilities : MonoBehaviour
         clickedObject.GetComponent<Stats>().Health -= Damage;
         if (clickedObject.GetComponent<Stats>().Health <= 0)
         {
+            GameObject character = clickedObject;
+            TurnController.IsAlive(character);
+            
             Destroy(clickedObject);
         }
         TurnController.ReadyUp();
@@ -360,6 +363,7 @@ public class HeroAbilities : MonoBehaviour
     // Plague Doctor Abilities
     public void StunningBomb(GameObject clickedObject)
     {
+        Debug.Log("activated");
         int AbilityDamage = Range(1, 3);
         int Damage = stats.BaseDamage + AbilityDamage;
         stats.Health -= Damage;
@@ -492,7 +496,7 @@ public class HeroAbilities : MonoBehaviour
             //SMITE
             case 1:
 
-                if (CrusaderReady && !ReadyingSmite)
+                if (CrusaderReady && !ReadyingSmite && !ReadyingAccusativeScroll && !ReadyingStunningStrike)
                 {
                     ReadyingSmite = true;
                     Debug.Log("READYING SMITE");
@@ -507,7 +511,7 @@ public class HeroAbilities : MonoBehaviour
             //ACCUSATIVE SCROLL
             case 2:
 
-                if (CrusaderReady && !ReadyingAccusativeScroll)
+                if (CrusaderReady && !ReadyingSmite && !ReadyingAccusativeScroll && !ReadyingStunningStrike)
                 {
                     ReadyingAccusativeScroll = true;
                     Debug.Log("READYING ACCUSATIVE SCROLL");
@@ -520,7 +524,7 @@ public class HeroAbilities : MonoBehaviour
                 break;
             //STUNNING STRIKE
             case 3:
-                if (CrusaderReady && !ReadyingStunningStrike)
+                if (CrusaderReady && !ReadyingSmite && !ReadyingAccusativeScroll && !ReadyingStunningStrike)
                 {
                     ReadyingStunningStrike = true;
                     Debug.Log("READYING STUNNING STRIKE");
@@ -540,15 +544,6 @@ public class HeroAbilities : MonoBehaviour
         }
 
 
-
-
-
-
-
-
-
-
-
     }
     public void SelectingHWMAttack(int i)
     {
@@ -557,7 +552,7 @@ public class HeroAbilities : MonoBehaviour
             //SMITE
             case 1:
 
-                if (HWMReady && !ReadyingPistolShot)
+                if (HWMReady && !ReadyingPistolShot && !ReadyingGrapeshotBlast && !ReadyingSlash)
                 {
                     ReadyingPistolShot = true;
 
@@ -571,7 +566,7 @@ public class HeroAbilities : MonoBehaviour
             //ACCUSATIVE SCROLL
             case 2:
 
-                if (HWMReady && !ReadyingGrapeshotBlast)
+                if (HWMReady && !ReadyingPistolShot && !ReadyingGrapeshotBlast && !ReadyingSlash)
                 {
                     ReadyingGrapeshotBlast = true;
                 }
@@ -583,7 +578,7 @@ public class HeroAbilities : MonoBehaviour
                 break;
             //STUNNING STRIKE
             case 3:
-                if (HWMReady && !ReadyingSlash)
+                if (HWMReady && !ReadyingPistolShot && !ReadyingGrapeshotBlast && !ReadyingSlash)
                 {
                     ReadyingSlash = true;
 
@@ -605,7 +600,7 @@ public class HeroAbilities : MonoBehaviour
         {
             case 1:
 
-                if (PlagueReady && !ReadyingStunningBomb)
+                if (PlagueReady && !ReadyingStunningBomb && !ReadyingPlagueBomb && !ReadyingBattleMedicine)
                 {
                     ReadyingStunningBomb = true;
 
@@ -618,7 +613,7 @@ public class HeroAbilities : MonoBehaviour
 
             case 2:
 
-                if (PlagueReady && !ReadyingPlagueBomb)
+                if (PlagueReady && !ReadyingStunningBomb && !ReadyingPlagueBomb && !ReadyingBattleMedicine)
                 {
                     ReadyingPlagueBomb = true;
                 }
@@ -629,7 +624,7 @@ public class HeroAbilities : MonoBehaviour
                 }
                 break;
             case 3:
-                if (PlagueReady && !ReadyingBattleMedicine)
+                if (PlagueReady && !ReadyingStunningBomb && !ReadyingPlagueBomb && !ReadyingBattleMedicine)
                 {
                     ReadyingBattleMedicine = true;
 

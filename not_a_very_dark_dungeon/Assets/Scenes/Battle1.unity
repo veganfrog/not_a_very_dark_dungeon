@@ -452,16 +452,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TurnController: {fileID: 0}
   stats: {fileID: 0}
-  controller: {fileID: 0}
   UIcontroller: {fileID: 0}
   IsTurn: 1
   CrusaderReady: 1
   HWMReady: 0
   PlagueReady: 0
   ReadyingSmite: 1
-  ReadyingProtectiveLight: 0
   ReadyingAccusativeScroll: 0
   ReadyingStunningStrike: 0
+  ReadyingPistolShot: 0
+  ReadyingGrapeshotBlast: 0
+  ReadyingSlash: 0
+  ReadyingStunningBomb: 0
+  ReadyingPlagueBomb: 0
+  ReadyingBattleMedicine: 0
 --- !u!114 &485815745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -733,6 +737,7 @@ GameObject:
   - component: {fileID: 506470465}
   - component: {fileID: 506470464}
   - component: {fileID: 506470463}
+  - component: {fileID: 506470471}
   - component: {fileID: 506470470}
   m_Layer: 0
   m_Name: Controller
@@ -771,7 +776,7 @@ MonoBehaviour:
   stats: {fileID: 506470464}
   heroAbilities: {fileID: 506470466}
   enemyAbilities: {fileID: 506470469}
-  gameOver: {fileID: 0}
+  gameOver: {fileID: 506470471}
   team1:
   - {fileID: 7700562553618584264, guid: 28cef9a190f919f46896ad9deb697ba9, type: 3}
   - {fileID: 378073371480584984, guid: e2187754e4525cc428eddf97b4701dba, type: 3}
@@ -838,16 +843,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TurnController: {fileID: 506470463}
   stats: {fileID: 506470464}
-  controller: {fileID: 506470470}
   UIcontroller: {fileID: 506470470}
   IsTurn: 0
   CrusaderReady: 0
   HWMReady: 0
   PlagueReady: 0
   ReadyingSmite: 0
-  ReadyingProtectiveLight: 0
   ReadyingAccusativeScroll: 0
   ReadyingStunningStrike: 0
+  ReadyingPistolShot: 0
+  ReadyingGrapeshotBlast: 0
+  ReadyingSlash: 0
+  ReadyingStunningBomb: 0
+  ReadyingPlagueBomb: 0
+  ReadyingBattleMedicine: 0
 --- !u!114 &506470467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -923,6 +932,18 @@ MonoBehaviour:
   crusaderAbilities: {fileID: 661939616}
   hwmAbilities: {fileID: 914590351}
   plaguedoctorAbilities: {fileID: 1949272126}
+--- !u!114 &506470471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506470461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95cb2af4f07da5e4caa6ab20a261eba6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &611617108
 GameObject:
   m_ObjectHideFlags: 0
@@ -1115,16 +1136,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TurnController: {fileID: 0}
   stats: {fileID: 0}
-  controller: {fileID: 0}
   UIcontroller: {fileID: 0}
   IsTurn: 1
   CrusaderReady: 1
   HWMReady: 0
   PlagueReady: 0
   ReadyingSmite: 0
-  ReadyingProtectiveLight: 0
   ReadyingAccusativeScroll: 0
   ReadyingStunningStrike: 1
+  ReadyingPistolShot: 0
+  ReadyingGrapeshotBlast: 0
+  ReadyingSlash: 0
+  ReadyingStunningBomb: 0
+  ReadyingPlagueBomb: 0
+  ReadyingBattleMedicine: 0
 --- !u!114 &657132592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1709,16 +1734,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TurnController: {fileID: 0}
   stats: {fileID: 0}
-  controller: {fileID: 0}
   UIcontroller: {fileID: 0}
   IsTurn: 1
   CrusaderReady: 1
   HWMReady: 0
   PlagueReady: 0
   ReadyingSmite: 0
-  ReadyingProtectiveLight: 0
   ReadyingAccusativeScroll: 1
   ReadyingStunningStrike: 0
+  ReadyingPistolShot: 0
+  ReadyingGrapeshotBlast: 0
+  ReadyingSlash: 0
+  ReadyingStunningBomb: 0
+  ReadyingPlagueBomb: 0
+  ReadyingBattleMedicine: 0
 --- !u!114 &937567731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2029,16 +2058,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TurnController: {fileID: 0}
   stats: {fileID: 0}
-  controller: {fileID: 0}
   UIcontroller: {fileID: 0}
   IsTurn: 1
   CrusaderReady: 1
   HWMReady: 0
   PlagueReady: 0
   ReadyingSmite: 1
-  ReadyingProtectiveLight: 0
   ReadyingAccusativeScroll: 0
   ReadyingStunningStrike: 0
+  ReadyingPistolShot: 0
+  ReadyingGrapeshotBlast: 0
+  ReadyingSlash: 0
+  ReadyingStunningBomb: 0
+  ReadyingPlagueBomb: 0
+  ReadyingBattleMedicine: 0
 --- !u!114 &1216505903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2349,16 +2382,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TurnController: {fileID: 0}
   stats: {fileID: 0}
-  controller: {fileID: 0}
   UIcontroller: {fileID: 0}
   IsTurn: 1
   CrusaderReady: 1
   HWMReady: 0
   PlagueReady: 0
   ReadyingSmite: 0
-  ReadyingProtectiveLight: 0
   ReadyingAccusativeScroll: 0
   ReadyingStunningStrike: 1
+  ReadyingPistolShot: 0
+  ReadyingGrapeshotBlast: 0
+  ReadyingSlash: 0
+  ReadyingStunningBomb: 0
+  ReadyingPlagueBomb: 0
+  ReadyingBattleMedicine: 0
 --- !u!114 &1573386925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2669,16 +2706,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TurnController: {fileID: 0}
   stats: {fileID: 0}
-  controller: {fileID: 0}
   UIcontroller: {fileID: 0}
   IsTurn: 1
   CrusaderReady: 1
   HWMReady: 0
   PlagueReady: 0
   ReadyingSmite: 0
-  ReadyingProtectiveLight: 0
   ReadyingAccusativeScroll: 1
   ReadyingStunningStrike: 0
+  ReadyingPistolShot: 0
+  ReadyingGrapeshotBlast: 0
+  ReadyingSlash: 0
+  ReadyingStunningBomb: 0
+  ReadyingPlagueBomb: 0
+  ReadyingBattleMedicine: 0
 --- !u!114 &1652067755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2852,16 +2893,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TurnController: {fileID: 0}
   stats: {fileID: 0}
-  controller: {fileID: 0}
   UIcontroller: {fileID: 0}
   IsTurn: 1
   CrusaderReady: 1
   HWMReady: 0
   PlagueReady: 0
   ReadyingSmite: 0
-  ReadyingProtectiveLight: 0
   ReadyingAccusativeScroll: 0
   ReadyingStunningStrike: 1
+  ReadyingPistolShot: 0
+  ReadyingGrapeshotBlast: 0
+  ReadyingSlash: 0
+  ReadyingStunningBomb: 0
+  ReadyingPlagueBomb: 0
+  ReadyingBattleMedicine: 0
 --- !u!114 &1688007652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3172,16 +3217,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TurnController: {fileID: 0}
   stats: {fileID: 0}
-  controller: {fileID: 0}
   UIcontroller: {fileID: 0}
   IsTurn: 1
   CrusaderReady: 1
   HWMReady: 0
   PlagueReady: 0
   ReadyingSmite: 0
-  ReadyingProtectiveLight: 0
   ReadyingAccusativeScroll: 1
   ReadyingStunningStrike: 0
+  ReadyingPistolShot: 0
+  ReadyingGrapeshotBlast: 0
+  ReadyingSlash: 0
+  ReadyingStunningBomb: 0
+  ReadyingPlagueBomb: 0
+  ReadyingBattleMedicine: 0
 --- !u!114 &1880163675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3649,16 +3698,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TurnController: {fileID: 0}
   stats: {fileID: 0}
-  controller: {fileID: 0}
   UIcontroller: {fileID: 0}
   IsTurn: 1
   CrusaderReady: 1
   HWMReady: 0
   PlagueReady: 0
   ReadyingSmite: 1
-  ReadyingProtectiveLight: 0
   ReadyingAccusativeScroll: 0
   ReadyingStunningStrike: 0
+  ReadyingPistolShot: 0
+  ReadyingGrapeshotBlast: 0
+  ReadyingSlash: 0
+  ReadyingStunningBomb: 0
+  ReadyingPlagueBomb: 0
+  ReadyingBattleMedicine: 0
 --- !u!114 &2068460984
 MonoBehaviour:
   m_ObjectHideFlags: 0
