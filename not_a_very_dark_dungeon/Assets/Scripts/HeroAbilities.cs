@@ -13,12 +13,10 @@ public class HeroAbilities : MonoBehaviour
     public TurnController TurnController;
     // stat blocks
     public Stats stats;
-<<<<<<< HEAD
-    public UIController controller;
 
-=======
+    public UIController controller;
     public UIController UIcontroller;
->>>>>>> 28190a5b5c053ed0cd5565da456b2115204f2421
+
 
 
 
@@ -179,12 +177,12 @@ public class HeroAbilities : MonoBehaviour
                 if (!CrusaderReady)
                 {
                     y = 1;
-<<<<<<< HEAD
+
                     controller.ReadyUI(y);
-=======
+
                     UIcontroller.ReadyUI(y);
                     
->>>>>>> 28190a5b5c053ed0cd5565da456b2115204f2421
+
                     CrusaderReady = true;
                     Debug.Log("READYING CRUSADER FOR ATTACK");
                 }
