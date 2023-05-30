@@ -15,9 +15,7 @@ public class HeroAbilities : MonoBehaviour
     public Stats stats;
 
 
-    //in game enemy and friendly objects
-    public GameObject Crusader;
-    public GameObject Enemy1;
+
 
     public bool IsTurn;
     //Selected attacker status
@@ -252,21 +250,16 @@ public class HeroAbilities : MonoBehaviour
                 if (CrusaderReady && !ReadyingStunningStrike)
                 {
                     ReadyingStunningStrike = true;
-<<<<<<< Updated upstream
                     Debug.Log("READYING STUNNING STRIKE");
-=======
-                    Debug.Log("READYING ACCUSATIVE SCROLL");
->>>>>>> Stashed changes
+
+
                 }
                 else if (CrusaderReady && ReadyingStunningStrike)
                 {
                     ReadyingStunningStrike = false;
-<<<<<<< Updated upstream
+
                     Debug.Log("NOT READYING STUNNING STRIKE");
-=======
-                    Debug.Log("NOT READYING ACCUSATIVE SCROLL");
->>>>>>> Stashed changes
-                }
+           }
 
                 break;
 

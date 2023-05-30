@@ -1,11 +1,13 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class TurnController : MonoBehaviour
 {
     public Stats stats;
     public HeroAbilities heroAbilities;
     public EnemyAbilities enemyAbilities;
+    public GameOver gameOver;
     // Define the teams and their members
     public List<GameObject> team1;
     public List<GameObject> team2;
@@ -76,10 +78,13 @@ public class TurnController : MonoBehaviour
                 yield return new WaitForSeconds(1.0f); // Delay between turns
             }
         }
-        if(team2.Count = 0)
+        if(team1.Count == 0)
         {
-                
+            gameOver.IsGameOver();
         }
+        else
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
 
         // The battle has ended
         Debug.Log("Battle Over!");

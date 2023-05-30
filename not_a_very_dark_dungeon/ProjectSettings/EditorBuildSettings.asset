@@ -4,5 +4,26 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Hallway.unity
+    guid: 2af8873b19a7d214aa8b750c38673d4f
+  - enabled: 1
+    path: Assets/Scenes/Battle1.unity
+    guid: 6bb9d298af005c64bb8c2489ce152df9
+  - enabled: 1
+    path: Assets/Scenes/HallWay2.unity
+    guid: 835afdc3bdfc34543b1c65dea9997b27
+  - enabled: 1
+    path: Assets/Scenes/Battle2.unity
+    guid: a341ca358ce410d4a8ca364e675f7ab7
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 39272d138ffdebc4ba1f5d68e04622e5
+  - enabled: 1
+    path: Assets/Scenes/Victory.unity
+    guid: 011ade3a48969264d8e73bf43990ea14
   m_configObjects: {}
