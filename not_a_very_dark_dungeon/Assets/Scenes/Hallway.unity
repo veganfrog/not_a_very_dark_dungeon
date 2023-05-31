@@ -419,6 +419,16 @@ MonoBehaviour:
   TurnController: {fileID: 0}
   stats: {fileID: 0}
   UIcontroller: {fileID: 0}
+  SmiteAudio: {fileID: 0}
+  ScrollAudio: {fileID: 0}
+  StunAudio: {fileID: 0}
+  PistolAudio: {fileID: 0}
+  GrapeShotAudio: {fileID: 0}
+  SlashAudio: {fileID: 0}
+  StunBombAudio: {fileID: 0}
+  PlagueBombAudio: {fileID: 0}
+  BattleMedicineAudio: {fileID: 0}
+  AudioSource: {fileID: 0}
   IsTurn: 1
   CrusaderReady: 1
   HWMReady: 0
@@ -743,6 +753,16 @@ MonoBehaviour:
   TurnController: {fileID: 0}
   stats: {fileID: 0}
   UIcontroller: {fileID: 0}
+  SmiteAudio: {fileID: 0}
+  ScrollAudio: {fileID: 0}
+  StunAudio: {fileID: 0}
+  PistolAudio: {fileID: 0}
+  GrapeShotAudio: {fileID: 0}
+  SlashAudio: {fileID: 0}
+  StunBombAudio: {fileID: 0}
+  PlagueBombAudio: {fileID: 0}
+  BattleMedicineAudio: {fileID: 0}
+  AudioSource: {fileID: 0}
   IsTurn: 1
   CrusaderReady: 1
   HWMReady: 0
@@ -906,6 +926,16 @@ MonoBehaviour:
   TurnController: {fileID: 0}
   stats: {fileID: 0}
   UIcontroller: {fileID: 0}
+  SmiteAudio: {fileID: 0}
+  ScrollAudio: {fileID: 0}
+  StunAudio: {fileID: 0}
+  PistolAudio: {fileID: 0}
+  GrapeShotAudio: {fileID: 0}
+  SlashAudio: {fileID: 0}
+  StunBombAudio: {fileID: 0}
+  PlagueBombAudio: {fileID: 0}
+  BattleMedicineAudio: {fileID: 0}
+  AudioSource: {fileID: 0}
   IsTurn: 1
   CrusaderReady: 1
   HWMReady: 0
@@ -1538,6 +1568,16 @@ MonoBehaviour:
   TurnController: {fileID: 0}
   stats: {fileID: 0}
   UIcontroller: {fileID: 0}
+  SmiteAudio: {fileID: 0}
+  ScrollAudio: {fileID: 0}
+  StunAudio: {fileID: 0}
+  PistolAudio: {fileID: 0}
+  GrapeShotAudio: {fileID: 0}
+  SlashAudio: {fileID: 0}
+  StunBombAudio: {fileID: 0}
+  PlagueBombAudio: {fileID: 0}
+  BattleMedicineAudio: {fileID: 0}
+  AudioSource: {fileID: 0}
   IsTurn: 1
   CrusaderReady: 1
   HWMReady: 0
@@ -1970,6 +2010,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 734222635}
   m_CullTransparentMesh: 1
+--- !u!4 &775732738 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9015312184592562927, guid: addacbf9b0537284685054a879043ee1, type: 3}
+  m_PrefabInstance: {fileID: 1348338789}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &816380283
 GameObject:
   m_ObjectHideFlags: 0
@@ -2026,6 +2071,16 @@ MonoBehaviour:
   TurnController: {fileID: 0}
   stats: {fileID: 0}
   UIcontroller: {fileID: 0}
+  SmiteAudio: {fileID: 0}
+  ScrollAudio: {fileID: 0}
+  StunAudio: {fileID: 0}
+  PistolAudio: {fileID: 0}
+  GrapeShotAudio: {fileID: 0}
+  SlashAudio: {fileID: 0}
+  StunBombAudio: {fileID: 0}
+  PlagueBombAudio: {fileID: 0}
+  BattleMedicineAudio: {fileID: 0}
+  AudioSource: {fileID: 0}
   IsTurn: 1
   CrusaderReady: 1
   HWMReady: 0
@@ -2888,6 +2943,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1348338789
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1957370126}
+    m_Modifications:
+    - target: {fileID: 9015312184592562927, guid: addacbf9b0537284685054a879043ee1, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015312184592562927, guid: addacbf9b0537284685054a879043ee1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015312184592562927, guid: addacbf9b0537284685054a879043ee1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015312184592562927, guid: addacbf9b0537284685054a879043ee1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015312184592562927, guid: addacbf9b0537284685054a879043ee1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -59.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015312184592562927, guid: addacbf9b0537284685054a879043ee1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -11.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015312184592562927, guid: addacbf9b0537284685054a879043ee1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015312184592562927, guid: addacbf9b0537284685054a879043ee1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7259167
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015312184592562927, guid: addacbf9b0537284685054a879043ee1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015312184592562927, guid: addacbf9b0537284685054a879043ee1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.68778276
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015312184592562927, guid: addacbf9b0537284685054a879043ee1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015312184592562927, guid: addacbf9b0537284685054a879043ee1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015312184592562927, guid: addacbf9b0537284685054a879043ee1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 86.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015312184592562927, guid: addacbf9b0537284685054a879043ee1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015312184592562931, guid: addacbf9b0537284685054a879043ee1, type: 3}
+      propertyPath: m_Name
+      value: PlagueDoctor
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: addacbf9b0537284685054a879043ee1, type: 3}
 --- !u!1 &1396802141
 GameObject:
   m_ObjectHideFlags: 0
@@ -2944,6 +3068,16 @@ MonoBehaviour:
   TurnController: {fileID: 0}
   stats: {fileID: 0}
   UIcontroller: {fileID: 0}
+  SmiteAudio: {fileID: 0}
+  ScrollAudio: {fileID: 0}
+  StunAudio: {fileID: 0}
+  PistolAudio: {fileID: 0}
+  GrapeShotAudio: {fileID: 0}
+  SlashAudio: {fileID: 0}
+  StunBombAudio: {fileID: 0}
+  PlagueBombAudio: {fileID: 0}
+  BattleMedicineAudio: {fileID: 0}
+  AudioSource: {fileID: 0}
   IsTurn: 1
   CrusaderReady: 1
   HWMReady: 0
@@ -3075,6 +3209,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1396802141}
   m_CullTransparentMesh: 1
+--- !u!1001 &1447633472
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1957370126}
+    m_Modifications:
+    - target: {fileID: 378073371480584980, guid: e2187754e4525cc428eddf97b4701dba, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 378073371480584980, guid: e2187754e4525cc428eddf97b4701dba, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 378073371480584980, guid: e2187754e4525cc428eddf97b4701dba, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 378073371480584980, guid: e2187754e4525cc428eddf97b4701dba, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 378073371480584980, guid: e2187754e4525cc428eddf97b4701dba, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -30.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 378073371480584980, guid: e2187754e4525cc428eddf97b4701dba, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -11.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 378073371480584980, guid: e2187754e4525cc428eddf97b4701dba, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 378073371480584980, guid: e2187754e4525cc428eddf97b4701dba, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7016684
+      objectReference: {fileID: 0}
+    - target: {fileID: 378073371480584980, guid: e2187754e4525cc428eddf97b4701dba, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 378073371480584980, guid: e2187754e4525cc428eddf97b4701dba, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.71250373
+      objectReference: {fileID: 0}
+    - target: {fileID: 378073371480584980, guid: e2187754e4525cc428eddf97b4701dba, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 378073371480584980, guid: e2187754e4525cc428eddf97b4701dba, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 378073371480584980, guid: e2187754e4525cc428eddf97b4701dba, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90.878
+      objectReference: {fileID: 0}
+    - target: {fileID: 378073371480584980, guid: e2187754e4525cc428eddf97b4701dba, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 378073371480584984, guid: e2187754e4525cc428eddf97b4701dba, type: 3}
+      propertyPath: m_Name
+      value: HWM
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e2187754e4525cc428eddf97b4701dba, type: 3}
 --- !u!1 &1481632271
 GameObject:
   m_ObjectHideFlags: 0
@@ -3259,6 +3462,16 @@ MonoBehaviour:
   TurnController: {fileID: 0}
   stats: {fileID: 0}
   UIcontroller: {fileID: 0}
+  SmiteAudio: {fileID: 0}
+  ScrollAudio: {fileID: 0}
+  StunAudio: {fileID: 0}
+  PistolAudio: {fileID: 0}
+  GrapeShotAudio: {fileID: 0}
+  SlashAudio: {fileID: 0}
+  StunBombAudio: {fileID: 0}
+  PlagueBombAudio: {fileID: 0}
+  BattleMedicineAudio: {fileID: 0}
+  AudioSource: {fileID: 0}
   IsTurn: 1
   CrusaderReady: 1
   HWMReady: 0
@@ -3583,6 +3796,16 @@ MonoBehaviour:
   TurnController: {fileID: 0}
   stats: {fileID: 0}
   UIcontroller: {fileID: 0}
+  SmiteAudio: {fileID: 0}
+  ScrollAudio: {fileID: 0}
+  StunAudio: {fileID: 0}
+  PistolAudio: {fileID: 0}
+  GrapeShotAudio: {fileID: 0}
+  SlashAudio: {fileID: 0}
+  StunBombAudio: {fileID: 0}
+  PlagueBombAudio: {fileID: 0}
+  BattleMedicineAudio: {fileID: 0}
+  AudioSource: {fileID: 0}
   IsTurn: 1
   CrusaderReady: 1
   HWMReady: 0
@@ -4074,6 +4297,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1034638249}
+  - {fileID: 1980170155}
+  - {fileID: 775732738}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4214,6 +4439,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1964557546}
   m_CullTransparentMesh: 1
+--- !u!4 &1980170155 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 378073371480584980, guid: e2187754e4525cc428eddf97b4701dba, type: 3}
+  m_PrefabInstance: {fileID: 1447633472}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2117397276
 GameObject:
   m_ObjectHideFlags: 0
@@ -4407,6 +4637,16 @@ MonoBehaviour:
   TurnController: {fileID: 0}
   stats: {fileID: 0}
   UIcontroller: {fileID: 0}
+  SmiteAudio: {fileID: 0}
+  ScrollAudio: {fileID: 0}
+  StunAudio: {fileID: 0}
+  PistolAudio: {fileID: 0}
+  GrapeShotAudio: {fileID: 0}
+  SlashAudio: {fileID: 0}
+  StunBombAudio: {fileID: 0}
+  PlagueBombAudio: {fileID: 0}
+  BattleMedicineAudio: {fileID: 0}
+  AudioSource: {fileID: 0}
   IsTurn: 1
   CrusaderReady: 1
   HWMReady: 0

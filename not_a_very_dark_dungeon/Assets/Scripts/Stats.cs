@@ -33,14 +33,8 @@ public class Stats : MonoBehaviour
             PoisonDamage--;
         }
     }
-    public void UpdateTextBoxes()
-    {
-        healthText.text = Health.ToString();
-    }
-    private void Update()
-    {
-        UpdateTextBoxes();
-    }
+    
+
 }
 
 

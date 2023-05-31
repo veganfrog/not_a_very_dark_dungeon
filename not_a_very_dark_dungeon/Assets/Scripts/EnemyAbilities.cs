@@ -172,7 +172,6 @@ public class EnemyAbilities : MonoBehaviour
         {
             Destroy(target);
         }
-        stats.UpdateTextBoxes();
         turnController.ReadyUp();
         AudioSource.clip = RatBiteAudio;
         AudioSource.Play();
@@ -202,7 +201,7 @@ public class EnemyAbilities : MonoBehaviour
         {
             Debug.Log("COULNDT BLEED");
         }
-        stats.UpdateTextBoxes();
+
         turnController.ReadyUp();
         AudioSource.clip = RabidBiteAudio;
         AudioSource.Play();
@@ -220,7 +219,7 @@ public class EnemyAbilities : MonoBehaviour
         target.GetComponent<Stats>().Health -= Damage;
         if (target.GetComponent<Stats>().Health <= 0)
         {
-            Destroy(target);
+            Destroy(target);    
         }
         else if (PoisonRoll <= PoisonChance)
         {
@@ -232,7 +231,6 @@ public class EnemyAbilities : MonoBehaviour
         {
             Debug.Log("COULNDT Blight");
         }
-        stats.UpdateTextBoxes();
         turnController.ReadyUp();
         AudioSource.clip = SpitAudio;
         AudioSource.Play();
@@ -261,7 +259,6 @@ public class EnemyAbilities : MonoBehaviour
         {
             Debug.Log("COULNDT STUN");
         }
-        stats.UpdateTextBoxes();
         turnController.ReadyUp();
         AudioSource.clip = SlimeAudio;
         AudioSource.Play();
@@ -293,7 +290,6 @@ public class EnemyAbilities : MonoBehaviour
         {
             Debug.Log("COULNDT BLEED");
         }
-        stats.UpdateTextBoxes();
         turnController.ReadyUp();
         AudioSource.clip = ShankAudio;
         AudioSource.Play();
@@ -322,7 +318,6 @@ public class EnemyAbilities : MonoBehaviour
         {
             Debug.Log("COULNDT STUN");
         }
-        stats.UpdateTextBoxes();
         AudioSource.clip = BashAudio;
         AudioSource.Play();
         turnController.ReadyUp();
@@ -352,7 +347,6 @@ public class EnemyAbilities : MonoBehaviour
         {
             Debug.Log("COULNDT Blight");
         }
-        stats.UpdateTextBoxes();
         turnController.ReadyUp();
         AudioSource.clip = SpitAudio;
         AudioSource.Play();
