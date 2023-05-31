@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -17,7 +18,8 @@ public class Stats : MonoBehaviour
     public int BleedDamage;
     public int PoisonDamage;
     public bool IsStunned;
-    
+
+    public TMP_Text healthText;
     public void DOTDamage(GameObject currentCharacter)
     {
         if (BleedDamage != 0)
@@ -30,6 +32,14 @@ public class Stats : MonoBehaviour
             currentCharacter.GetComponent<Stats>().Health -= PoisonDamage;
             PoisonDamage--;
         }
+    }
+    public void UpdateTextBoxes()
+    {
+        healthText.text = Health.ToString();
+    }
+    private void Update()
+    {
+        UpdateTextBoxes();
     }
 }
 
