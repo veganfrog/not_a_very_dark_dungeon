@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4140099169956872819}
   - component: {fileID: 488508085493983580}
   m_Layer: 0
-  m_Name: Slime
+  m_Name: Hobo
   m_TagString: Slime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

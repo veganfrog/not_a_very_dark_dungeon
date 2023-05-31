@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7451548689917782836
+--- !u!1 &1460871325368646857
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,49 +8,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7451548689917782840}
-  - component: {fileID: 7451548689917782843}
-  - component: {fileID: 7451548689917782842}
-  - component: {fileID: 7451548689917782837}
-  - component: {fileID: 4140099169956872819}
-  - component: {fileID: 488508085493983580}
+  - component: {fileID: 1460871325368646861}
+  - component: {fileID: 1460871325368646862}
+  - component: {fileID: 1460871325368646863}
+  - component: {fileID: 1460871325368646856}
+  - component: {fileID: 1265585830765772174}
+  - component: {fileID: -9109121319468176200}
   m_Layer: 0
-  m_Name: Slime
-  m_TagString: Slime
+  m_Name: PoisonRat
+  m_TagString: BasicRat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7451548689917782840
+--- !u!4 &1460871325368646861
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7451548689917782836}
+  m_GameObject: {fileID: 1460871325368646857}
   m_LocalRotation: {x: -0, y: -0.99953836, z: -0, w: 0.030382719}
-  m_LocalPosition: {x: 0.031282503, y: 0, z: 4.289049}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.108, y: 0, z: 1.993}
+  m_LocalScale: {x: 0.032743, y: 1, z: 1.5528}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -176.518, z: 0}
---- !u!33 &7451548689917782843
+--- !u!33 &1460871325368646862
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7451548689917782836}
+  m_GameObject: {fileID: 1460871325368646857}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &7451548689917782842
+--- !u!23 &1460871325368646863
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7451548689917782836}
+  m_GameObject: {fileID: 1460871325368646857}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -86,49 +86,49 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7451548689917782837
+--- !u!65 &1460871325368646856
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7451548689917782836}
+  m_GameObject: {fileID: 1460871325368646857}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4140099169956872819
+--- !u!114 &1265585830765772174
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7451548689917782836}
+  m_GameObject: {fileID: 1460871325368646857}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ac5d5b00af4c2b478f843b1582da7af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Slime
-  Health: 18
-  MaxHealth: 18
-  BaseDamage: 4
-  Speed: 2
-  BleedResist: 60
-  PoisonResist: 40
+  Name: BasicRat
+  Health: 9
+  MaxHealth: 9
+  BaseDamage: 3
+  Speed: 5
+  BleedResist: 10
+  PoisonResist: 60
   StunResist: 0
   BleedDamage: 0
   PoisonDamage: 0
   IsStunned: 0
---- !u!82 &488508085493983580
+--- !u!82 &-9109121319468176200
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7451548689917782836}
+  m_GameObject: {fileID: 1460871325368646857}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
