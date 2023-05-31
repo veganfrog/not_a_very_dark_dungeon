@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -15,7 +16,17 @@ public class HeroAbilities : MonoBehaviour
     public UIController UIcontroller;
 
 
-
+    [SerializeField]
+    public AudioClip SmiteAudio;
+    public AudioClip ScrollAudio;
+    public AudioClip StunAudio;
+    public AudioClip PistolAudio;
+    public AudioClip GrapeShotAudio;
+    public AudioClip SlashAudio;
+    public AudioClip StunBombAudio;
+    public AudioClip PlagueBombAudio;
+    public AudioClip BattleMedicineAudio;
+    public AudioSource AudioSource;
 
     public bool IsTurn;
     //Selected attacker status
@@ -131,6 +142,8 @@ public class HeroAbilities : MonoBehaviour
         }
         TurnController.ReadyUp();
         UIcontroller.ReadyUI(y);
+        AudioSource.clip = SmiteAudio;
+        AudioSource.Play();
         Debug.Log(Damage);
     }
     public void AccusativeScroll(GameObject clickedObject1, GameObject clickedObject2)
@@ -174,6 +187,8 @@ public class HeroAbilities : MonoBehaviour
                 Destroy(clickedObject2);
             }
         }
+        AudioSource.clip = ScrollAudio;
+        AudioSource.Play();
         UIcontroller.ReadyUI(y);
         TurnController.ReadyUp();
 
@@ -205,10 +220,12 @@ public class HeroAbilities : MonoBehaviour
             Debug.Log("COULNDT STUN");
         }
 
-
+        AudioSource.clip = StunAudio;
+        AudioSource.Play();
         Debug.Log(Damage);
         UIcontroller.ReadyUI(y);
         TurnController.ReadyUp();
+
 
     }
     //HWM ABILITIES
@@ -225,6 +242,8 @@ public class HeroAbilities : MonoBehaviour
         }
         UIcontroller.ReadyUI(y);
         TurnController.ReadyUp();
+        AudioSource.clip = PistolAudio;
+        AudioSource.Play();
         Debug.Log(Damage);
     }
     public void GrapeshotBlast(GameObject clickedObject1, GameObject clickedObject2, GameObject clickedObject3)
@@ -333,6 +352,8 @@ public class HeroAbilities : MonoBehaviour
             }
 
         }
+        AudioSource.clip = GrapeShotAudio;
+        AudioSource.Play();
         UIcontroller.ReadyUI(y);
         TurnController.ReadyUp();
 
@@ -363,7 +384,8 @@ public class HeroAbilities : MonoBehaviour
         {
             Debug.Log("COULNDT BLEED");
         }
-
+        AudioSource.clip = SlashAudio;
+        AudioSource.Play();
         Debug.Log(Damage);
         UIcontroller.ReadyUI(y);
         TurnController.ReadyUp();
@@ -395,6 +417,8 @@ public class HeroAbilities : MonoBehaviour
         {
             Debug.Log("COULNDT STUN");
         }
+        AudioSource.clip = StunBombAudio;
+        AudioSource.Play();
         UIcontroller.ReadyUI(y);
         TurnController.ReadyUp();
         Debug.Log(Damage);
@@ -423,12 +447,16 @@ public class HeroAbilities : MonoBehaviour
         {
             Debug.Log("COULNDT Blight");
         }
+        AudioSource.clip = PlagueBombAudio;
+        AudioSource.Play();
         UIcontroller.ReadyUI(y);
         TurnController.ReadyUp();
         Debug.Log(Damage);
     }
     public void BattleMedicine(GameObject clickedObject)
     {
+        AudioSource.clip = BattleMedicineAudio;
+        AudioSource.Play();
         int y = 3;
         int AbilityDamage = Range(1, 5);
         int Damage = stats.BaseDamage + AbilityDamage;

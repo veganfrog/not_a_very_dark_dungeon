@@ -7,7 +7,15 @@ using Random = UnityEngine.Random;
 
 public class EnemyAbilities : MonoBehaviour
 {
-   public List<GameObject> FriendlyPlayers ;
+    [SerializeField]
+    public AudioClip RatBiteAudio;
+    public AudioClip RabidBiteAudio;
+    public AudioClip SlimeAudio;
+    public AudioClip ShankAudio;
+    public AudioClip BashAudio;
+    public AudioClip SpitAudio;
+    public AudioSource AudioSource;
+    public List<GameObject> FriendlyPlayers ;
     public Stats stats ;
     public TurnController turnController ;
     GameObject target;
@@ -162,6 +170,8 @@ public class EnemyAbilities : MonoBehaviour
         }
         stats.UpdateTextBoxes();
         turnController.ReadyUp();
+        AudioSource.clip = RatBiteAudio;
+        AudioSource.Play();
         Debug.Log(Damage);  
     }
     public void RabidBiteDamage(GameObject target)
@@ -190,6 +200,8 @@ public class EnemyAbilities : MonoBehaviour
         }
         stats.UpdateTextBoxes();
         turnController.ReadyUp();
+        AudioSource.clip = RabidBiteAudio;
+        AudioSource.Play();
         Debug.Log(Damage);
     }
     public void DiseasedSpitDamage(GameObject target)
@@ -218,6 +230,8 @@ public class EnemyAbilities : MonoBehaviour
         }
         stats.UpdateTextBoxes();
         turnController.ReadyUp();
+        AudioSource.clip = SpitAudio;
+        AudioSource.Play();
         Debug.Log(Damage);
     }
     public void SlimeBashDamage(GameObject target)
@@ -245,6 +259,8 @@ public class EnemyAbilities : MonoBehaviour
         }
         stats.UpdateTextBoxes();
         turnController.ReadyUp();
+        AudioSource.clip = SlimeAudio;
+        AudioSource.Play();
         Debug.Log(Damage);
     }
 
@@ -275,6 +291,8 @@ public class EnemyAbilities : MonoBehaviour
         }
         stats.UpdateTextBoxes();
         turnController.ReadyUp();
+        AudioSource.clip = ShankAudio;
+        AudioSource.Play();
         Debug.Log(Damage);
     }
     public void BashDamage(GameObject target)
@@ -301,6 +319,8 @@ public class EnemyAbilities : MonoBehaviour
             Debug.Log("COULNDT STUN");
         }
         stats.UpdateTextBoxes();
+        AudioSource.clip = BashAudio;
+        AudioSource.Play();
         turnController.ReadyUp();
         Debug.Log(Damage);
     }
@@ -330,6 +350,8 @@ public class EnemyAbilities : MonoBehaviour
         }
         stats.UpdateTextBoxes();
         turnController.ReadyUp();
+        AudioSource.clip = SpitAudio;
+        AudioSource.Play();
         Debug.Log(Damage);
     }
 }

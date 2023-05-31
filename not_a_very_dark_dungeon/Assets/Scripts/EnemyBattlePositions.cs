@@ -128,7 +128,7 @@ public class EnemyBattlePositions : MonoBehaviour
             GameObject clickedObject = hit.collider.gameObject;
             Vector3 clickedPosition = hit.collider.transform.position;
 
-            if (enemyCubes[0] != null && enemyCubes[1] != null)
+            if (enemyCubes[0] != null && enemyCubes[1] != null) 
             {
                 Debug.Log("HIT BOTH ENEMIES");
                 GameObject ClickedObject1, ClickedObject2;

@@ -22,6 +22,8 @@ public class TurnController : MonoBehaviour
     // Coroutine to handle the turn-based battle
     private System.Collections.IEnumerator StartBattle()
     {
+        yield return new WaitForSeconds(3.0f);
+
         // Combine all characters from both teams into a single list
         List<GameObject> allCharacters = new List<GameObject>();
         allCharacters.AddRange(team1);
@@ -80,7 +82,7 @@ public class TurnController : MonoBehaviour
                 if (!IsAlive(target))
                     targetTeam.Remove(target);
 
-                yield return new WaitForSeconds(1.0f); // Delay between turns
+                yield return new WaitForSeconds(3.0f); // Delay between turns
             }
         }
         if(team1.Count == 0)

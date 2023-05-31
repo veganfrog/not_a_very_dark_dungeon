@@ -18,7 +18,7 @@ public class Stats : MonoBehaviour
     public int BleedDamage;
     public int PoisonDamage;
     public bool IsStunned;
-
+    
     public TMP_Text healthText;
     public void DOTDamage(GameObject currentCharacter)
     {

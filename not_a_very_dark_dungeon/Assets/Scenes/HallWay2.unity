@@ -921,15 +921,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TurnController: {fileID: 0}
   stats: {fileID: 0}
-  controller: {fileID: 0}
+  UIcontroller: {fileID: 0}
   IsTurn: 1
   CrusaderReady: 1
   HWMReady: 0
   PlagueReady: 0
   ReadyingSmite: 0
-  ReadyingProtectiveLight: 0
   ReadyingAccusativeScroll: 0
   ReadyingStunningStrike: 1
+  ReadyingPistolShot: 0
+  ReadyingGrapeshotBlast: 0
+  ReadyingSlash: 0
+  ReadyingStunningBomb: 0
+  ReadyingPlagueBomb: 0
+  ReadyingBattleMedicine: 0
 --- !u!1 &834050332
 GameObject:
   m_ObjectHideFlags: 0
@@ -1354,15 +1359,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TurnController: {fileID: 0}
   stats: {fileID: 0}
-  controller: {fileID: 0}
+  UIcontroller: {fileID: 0}
   IsTurn: 1
   CrusaderReady: 1
   HWMReady: 0
   PlagueReady: 0
   ReadyingSmite: 1
-  ReadyingProtectiveLight: 0
   ReadyingAccusativeScroll: 0
   ReadyingStunningStrike: 0
+  ReadyingPistolShot: 0
+  ReadyingGrapeshotBlast: 0
+  ReadyingSlash: 0
+  ReadyingStunningBomb: 0
+  ReadyingPlagueBomb: 0
+  ReadyingBattleMedicine: 0
 --- !u!1 &1176405388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1374,6 +1384,7 @@ GameObject:
   - component: {fileID: 1176405391}
   - component: {fileID: 1176405390}
   - component: {fileID: 1176405389}
+  - component: {fileID: 1176405392}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1447,6 +1458,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1176405392
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176405388}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: cd7b5e4ca7db8c34d994a82eff73d285, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1332719686
 GameObject:
   m_ObjectHideFlags: 0
@@ -2346,15 +2453,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TurnController: {fileID: 0}
   stats: {fileID: 0}
-  controller: {fileID: 0}
+  UIcontroller: {fileID: 0}
   IsTurn: 1
   CrusaderReady: 1
   HWMReady: 0
   PlagueReady: 0
   ReadyingSmite: 0
-  ReadyingProtectiveLight: 0
   ReadyingAccusativeScroll: 1
   ReadyingStunningStrike: 0
+  ReadyingPistolShot: 0
+  ReadyingGrapeshotBlast: 0
+  ReadyingSlash: 0
+  ReadyingStunningBomb: 0
+  ReadyingPlagueBomb: 0
+  ReadyingBattleMedicine: 0
 --- !u!1 &2079356561
 GameObject:
   m_ObjectHideFlags: 0
@@ -2629,15 +2741,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TurnController: {fileID: 0}
   stats: {fileID: 0}
-  controller: {fileID: 0}
+  UIcontroller: {fileID: 0}
   IsTurn: 1
   CrusaderReady: 1
   HWMReady: 0
   PlagueReady: 0
   ReadyingSmite: 0
-  ReadyingProtectiveLight: 0
   ReadyingAccusativeScroll: 1
   ReadyingStunningStrike: 0
+  ReadyingPistolShot: 0
+  ReadyingGrapeshotBlast: 0
+  ReadyingSlash: 0
+  ReadyingStunningBomb: 0
+  ReadyingPlagueBomb: 0
+  ReadyingBattleMedicine: 0
 --- !u!114 &5930685037318585350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2914,15 +3031,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TurnController: {fileID: 0}
   stats: {fileID: 0}
-  controller: {fileID: 0}
+  UIcontroller: {fileID: 0}
   IsTurn: 1
   CrusaderReady: 1
   HWMReady: 0
   PlagueReady: 0
   ReadyingSmite: 1
-  ReadyingProtectiveLight: 0
   ReadyingAccusativeScroll: 0
   ReadyingStunningStrike: 0
+  ReadyingPistolShot: 0
+  ReadyingGrapeshotBlast: 0
+  ReadyingSlash: 0
+  ReadyingStunningBomb: 0
+  ReadyingPlagueBomb: 0
+  ReadyingBattleMedicine: 0
 --- !u!114 &5930685037967466086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3233,15 +3355,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TurnController: {fileID: 0}
   stats: {fileID: 0}
-  controller: {fileID: 0}
+  UIcontroller: {fileID: 0}
   IsTurn: 1
   CrusaderReady: 1
   HWMReady: 0
   PlagueReady: 0
   ReadyingSmite: 0
-  ReadyingProtectiveLight: 0
   ReadyingAccusativeScroll: 0
   ReadyingStunningStrike: 1
+  ReadyingPistolShot: 0
+  ReadyingGrapeshotBlast: 0
+  ReadyingSlash: 0
+  ReadyingStunningBomb: 0
+  ReadyingPlagueBomb: 0
+  ReadyingBattleMedicine: 0
 --- !u!114 &5930685038924055754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3585,15 +3712,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TurnController: {fileID: 0}
   stats: {fileID: 0}
-  controller: {fileID: 0}
+  UIcontroller: {fileID: 0}
   IsTurn: 1
   CrusaderReady: 1
   HWMReady: 0
   PlagueReady: 0
   ReadyingSmite: 0
-  ReadyingProtectiveLight: 0
   ReadyingAccusativeScroll: 1
   ReadyingStunningStrike: 0
+  ReadyingPistolShot: 0
+  ReadyingGrapeshotBlast: 0
+  ReadyingSlash: 0
+  ReadyingStunningBomb: 0
+  ReadyingPlagueBomb: 0
+  ReadyingBattleMedicine: 0
 --- !u!222 &9056785655174787965
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3983,15 +4115,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TurnController: {fileID: 0}
   stats: {fileID: 0}
-  controller: {fileID: 0}
+  UIcontroller: {fileID: 0}
   IsTurn: 1
   CrusaderReady: 1
   HWMReady: 0
   PlagueReady: 0
   ReadyingSmite: 1
-  ReadyingProtectiveLight: 0
   ReadyingAccusativeScroll: 0
   ReadyingStunningStrike: 0
+  ReadyingPistolShot: 0
+  ReadyingGrapeshotBlast: 0
+  ReadyingSlash: 0
+  ReadyingStunningBomb: 0
+  ReadyingPlagueBomb: 0
+  ReadyingBattleMedicine: 0
 --- !u!222 &9056785656010019101
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4100,15 +4237,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TurnController: {fileID: 0}
   stats: {fileID: 0}
-  controller: {fileID: 0}
+  UIcontroller: {fileID: 0}
   IsTurn: 1
   CrusaderReady: 1
   HWMReady: 0
   PlagueReady: 0
   ReadyingSmite: 0
-  ReadyingProtectiveLight: 0
   ReadyingAccusativeScroll: 0
   ReadyingStunningStrike: 1
+  ReadyingPistolShot: 0
+  ReadyingGrapeshotBlast: 0
+  ReadyingSlash: 0
+  ReadyingStunningBomb: 0
+  ReadyingPlagueBomb: 0
+  ReadyingBattleMedicine: 0
 --- !u!222 &9056785656664558513
 CanvasRenderer:
   m_ObjectHideFlags: 0
