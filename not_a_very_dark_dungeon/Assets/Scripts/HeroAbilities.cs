@@ -13,7 +13,7 @@ public class HeroAbilities : MonoBehaviour
     // stat blocks
     public Stats stats;
     public UIController UIcontroller;
-    public DamageTextController DamageTextController;
+
 
 
 
@@ -117,11 +117,7 @@ public class HeroAbilities : MonoBehaviour
     // Crusader abilities
     public void Smite(GameObject clickedObject)
     {
-<<<<<<< Updated upstream
         int y = 1;
-=======
-        int y =1;
->>>>>>> Stashed changes
         int AbilityDamage = Range(4, 10);
         int Damage = stats.BaseDamage + AbilityDamage;
         stats.Health -= Damage;
@@ -133,14 +129,8 @@ public class HeroAbilities : MonoBehaviour
             
             Destroy(clickedObject);
         }
-        DamageTextController.DisplayDamage(clickedObject,Damage);
-        UIcontroller.ReadyUI(y);
         TurnController.ReadyUp();
-<<<<<<< Updated upstream
         UIcontroller.ReadyUI(y);
-=======
-     
->>>>>>> Stashed changes
         Debug.Log(Damage);
     }
     public void AccusativeScroll(GameObject clickedObject1, GameObject clickedObject2)
@@ -184,14 +174,7 @@ public class HeroAbilities : MonoBehaviour
                 Destroy(clickedObject2);
             }
         }
-<<<<<<< Updated upstream
         UIcontroller.ReadyUI(y);
-=======
-        GameObject clickedObject = clickedObject1;
-        DamageTextController.DisplayDamage(clickedObject, Damage);
-        clickedObject = clickedObject2;
-        DamageTextController.DisplayDamage(clickedObject, Damage);
->>>>>>> Stashed changes
         TurnController.ReadyUp();
 
 
@@ -222,8 +205,7 @@ public class HeroAbilities : MonoBehaviour
             Debug.Log("COULNDT STUN");
         }
 
-        DamageTextController.DisplayDamage(clickedObject, Damage);
-       
+
         Debug.Log(Damage);
         UIcontroller.ReadyUI(y);
         TurnController.ReadyUp();
@@ -241,11 +223,7 @@ public class HeroAbilities : MonoBehaviour
         {
             Destroy(clickedObject);
         }
-<<<<<<< Updated upstream
         UIcontroller.ReadyUI(y);
-=======
-        DamageTextController.DisplayDamage(clickedObject, Damage);
->>>>>>> Stashed changes
         TurnController.ReadyUp();
         Debug.Log(Damage);
     }
@@ -355,20 +333,8 @@ public class HeroAbilities : MonoBehaviour
             }
 
         }
-<<<<<<< Updated upstream
         UIcontroller.ReadyUI(y);
         TurnController.ReadyUp();
-=======
-        GameObject clickedObject = clickedObject1;
-        DamageTextController.DisplayDamage(clickedObject, Damage);
-        clickedObject = clickedObject2;
-        DamageTextController.DisplayDamage(clickedObject, Damage);
-        clickedObject = clickedObject3;
-        DamageTextController.DisplayDamage(clickedObject, Damage);
-
-        TurnController.ReadyUp();
-
->>>>>>> Stashed changes
 
 
     }
@@ -397,7 +363,7 @@ public class HeroAbilities : MonoBehaviour
         {
             Debug.Log("COULNDT BLEED");
         }
-        DamageTextController.DisplayDamage(clickedObject, Damage);
+
         Debug.Log(Damage);
         UIcontroller.ReadyUI(y);
         TurnController.ReadyUp();
@@ -429,11 +395,7 @@ public class HeroAbilities : MonoBehaviour
         {
             Debug.Log("COULNDT STUN");
         }
-<<<<<<< Updated upstream
         UIcontroller.ReadyUI(y);
-=======
-        DamageTextController.DisplayDamage(clickedObject, Damage);
->>>>>>> Stashed changes
         TurnController.ReadyUp();
         Debug.Log(Damage);
     }
@@ -461,11 +423,7 @@ public class HeroAbilities : MonoBehaviour
         {
             Debug.Log("COULNDT Blight");
         }
-<<<<<<< Updated upstream
         UIcontroller.ReadyUI(y);
-=======
-        DamageTextController.DisplayDamage(clickedObject, Damage);
->>>>>>> Stashed changes
         TurnController.ReadyUp();
         Debug.Log(Damage);
     }
@@ -477,11 +435,7 @@ public class HeroAbilities : MonoBehaviour
         clickedObject.GetComponent<Stats>().Health += Damage;
         clickedObject.GetComponent<Stats>().BleedDamage = 0;
         clickedObject.GetComponent<Stats>().PoisonDamage = 0;
-<<<<<<< Updated upstream
         UIcontroller.ReadyUI(y);
-=======
-        DamageTextController.DisplayDamage(clickedObject, Damage);
->>>>>>> Stashed changes
         TurnController.ReadyUp();
         Debug.Log(Damage);
     }
