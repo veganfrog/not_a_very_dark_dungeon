@@ -117,7 +117,6 @@ public class HeroAbilities : MonoBehaviour
     // Crusader abilities
     public void Smite(GameObject clickedObject)
     {
-        int y = 1;
         int AbilityDamage = Range(4, 10);
         int Damage = stats.BaseDamage + AbilityDamage;
         stats.Health -= Damage;
@@ -130,13 +129,12 @@ public class HeroAbilities : MonoBehaviour
             Destroy(clickedObject);
         }
         TurnController.ReadyUp();
-        UIcontroller.ReadyUI(y);
         Debug.Log(Damage);
     }
     public void AccusativeScroll(GameObject clickedObject1, GameObject clickedObject2)
     {
         // damages  first two enemies
-        int y = 1;
+
         int AbilityDamage = Range(2, 6);
         int Damage = stats.BaseDamage + AbilityDamage;
         if (clickedObject1 != null && clickedObject2 != null)
@@ -174,7 +172,6 @@ public class HeroAbilities : MonoBehaviour
                 Destroy(clickedObject2);
             }
         }
-        UIcontroller.ReadyUI(y);
         TurnController.ReadyUp();
 
 
@@ -182,7 +179,6 @@ public class HeroAbilities : MonoBehaviour
     public void StunningStrike(GameObject clickedObject)
     {
         // attemps to stun one enemy
-        int y = 1;
         int AbilityDamage = Range(2, 4);
         int Damage = stats.BaseDamage + AbilityDamage;
         stats.Health -= Damage;
@@ -207,14 +203,12 @@ public class HeroAbilities : MonoBehaviour
 
 
         Debug.Log(Damage);
-        UIcontroller.ReadyUI(y);
         TurnController.ReadyUp();
 
     }
     //HWM ABILITIES
     public void PistolShot(GameObject clickedObject)
     {
-        int y = 2;
         int AbilityDamage = Range(3, 6);
         int Damage = stats.BaseDamage + AbilityDamage;
         stats.Health -= Damage;
@@ -223,14 +217,13 @@ public class HeroAbilities : MonoBehaviour
         {
             Destroy(clickedObject);
         }
-        UIcontroller.ReadyUI(y);
         TurnController.ReadyUp();
         Debug.Log(Damage);
     }
     public void GrapeshotBlast(GameObject clickedObject1, GameObject clickedObject2, GameObject clickedObject3)
     {
         // damages  first three enemies
-        int y = 2;
+
         int AbilityDamage = Range(2, 6);
         int Damage = stats.BaseDamage + AbilityDamage;
         if (clickedObject1 != null && clickedObject2 != null && clickedObject3 != null)
@@ -284,6 +277,7 @@ public class HeroAbilities : MonoBehaviour
                 Destroy(clickedObject2);
 
             }
+            TurnController.ReadyUp();
         }
 
 
@@ -333,15 +327,13 @@ public class HeroAbilities : MonoBehaviour
             }
 
         }
-        UIcontroller.ReadyUI(y);
-        TurnController.ReadyUp();
+
 
 
     }
     public void Slash(GameObject clickedObject)
     {
         // attemps to stun one enemy
-        int y = 2;
         int AbilityDamage = Range(2, 4);
         int Damage = stats.BaseDamage + AbilityDamage;
         stats.Health -= Damage;
@@ -365,14 +357,12 @@ public class HeroAbilities : MonoBehaviour
         }
 
         Debug.Log(Damage);
-        UIcontroller.ReadyUI(y);
         TurnController.ReadyUp();
 
     }
     // Plague Doctor Abilities
     public void StunningBomb(GameObject clickedObject)
     {
-        int y = 3;
         Debug.Log("activated");
         int AbilityDamage = Range(1, 3);
         int Damage = stats.BaseDamage + AbilityDamage;
@@ -395,13 +385,13 @@ public class HeroAbilities : MonoBehaviour
         {
             Debug.Log("COULNDT STUN");
         }
-        UIcontroller.ReadyUI(y);
+
         TurnController.ReadyUp();
         Debug.Log(Damage);
     }
     public void PlagueBomb(GameObject clickedObject)
     {
-        int y = 3;
+
         int AbilityDamage = Range(1, 5);
         int Damage = stats.BaseDamage + AbilityDamage;
         stats.Health -= Damage;
@@ -423,19 +413,16 @@ public class HeroAbilities : MonoBehaviour
         {
             Debug.Log("COULNDT Blight");
         }
-        UIcontroller.ReadyUI(y);
         TurnController.ReadyUp();
         Debug.Log(Damage);
     }
     public void BattleMedicine(GameObject clickedObject)
     {
-        int y = 3;
         int AbilityDamage = Range(1, 5);
         int Damage = stats.BaseDamage + AbilityDamage;
         clickedObject.GetComponent<Stats>().Health += Damage;
         clickedObject.GetComponent<Stats>().BleedDamage = 0;
         clickedObject.GetComponent<Stats>().PoisonDamage = 0;
-        UIcontroller.ReadyUI(y);
         TurnController.ReadyUp();
         Debug.Log(Damage);
     }

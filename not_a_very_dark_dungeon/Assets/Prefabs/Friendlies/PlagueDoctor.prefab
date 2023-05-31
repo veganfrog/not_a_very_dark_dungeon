@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Plague Doctor
-  Health: 18
+  Health: 5
   MaxHealth: 18
   BaseDamage: 4
   Speed: 5
@@ -121,4 +121,3 @@ MonoBehaviour:
   BleedDamage: 0
   PoisonDamage: 0
   IsStunned: 0
-  healthText: {fileID: 2598465743357450670, guid: 3655baeb76f2a574085e5ef8682fe453, type: 3}

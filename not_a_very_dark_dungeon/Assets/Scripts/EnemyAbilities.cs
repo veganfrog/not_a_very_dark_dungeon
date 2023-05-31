@@ -160,9 +160,8 @@ public class EnemyAbilities : MonoBehaviour
         {
             Destroy(target);
         }
-        stats.UpdateTextBoxes();
         turnController.ReadyUp();
-        Debug.Log(Damage);  
+        Debug.Log(Damage);
     }
     public void RabidBiteDamage(GameObject target)
     {
@@ -188,7 +187,6 @@ public class EnemyAbilities : MonoBehaviour
         {
             Debug.Log("COULNDT BLEED");
         }
-        stats.UpdateTextBoxes();
         turnController.ReadyUp();
         Debug.Log(Damage);
     }
@@ -216,7 +214,6 @@ public class EnemyAbilities : MonoBehaviour
         {
             Debug.Log("COULNDT Blight");
         }
-        stats.UpdateTextBoxes();
         turnController.ReadyUp();
         Debug.Log(Damage);
     }
@@ -243,7 +240,7 @@ public class EnemyAbilities : MonoBehaviour
         {
             Debug.Log("COULNDT STUN");
         }
-        stats.UpdateTextBoxes();
+
         turnController.ReadyUp();
         Debug.Log(Damage);
     }
@@ -273,7 +270,6 @@ public class EnemyAbilities : MonoBehaviour
         {
             Debug.Log("COULNDT BLEED");
         }
-        stats.UpdateTextBoxes();
         turnController.ReadyUp();
         Debug.Log(Damage);
     }
@@ -300,7 +296,7 @@ public class EnemyAbilities : MonoBehaviour
         {
             Debug.Log("COULNDT STUN");
         }
-        stats.UpdateTextBoxes();
+
         turnController.ReadyUp();
         Debug.Log(Damage);
     }
@@ -328,7 +324,6 @@ public class EnemyAbilities : MonoBehaviour
         {
             Debug.Log("COULNDT Blight");
         }
-        stats.UpdateTextBoxes();
         turnController.ReadyUp();
         Debug.Log(Damage);
     }
