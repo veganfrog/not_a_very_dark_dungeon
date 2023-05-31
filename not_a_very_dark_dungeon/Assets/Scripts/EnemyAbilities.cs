@@ -18,7 +18,7 @@ public class EnemyAbilities : MonoBehaviour
     public List<GameObject> FriendlyPlayers ;
     public Stats stats ;
     public TurnController turnController ;
-    GameObject target;
+    private GameObject target;
     //TARGET SELECTION
     public void RatBite()
     {
@@ -26,7 +26,7 @@ public class EnemyAbilities : MonoBehaviour
         switch (randomIndex)
         {
             case 0:
-                target = FriendlyPlayers[randomIndex];
+                GameObject target = FriendlyPlayers[randomIndex];
                 RatBiteDamage(target);
                 break;
             case 1:
@@ -46,15 +46,19 @@ public class EnemyAbilities : MonoBehaviour
         switch (randomIndex)
         {
             case 0:
-                target = FriendlyPlayers[randomIndex];
+                
+                GameObject  target = FriendlyPlayers[randomIndex];
+                Debug.Log("hit crusader");
                 RabidBiteDamage(target);
                 break;
             case 1:
                 target = FriendlyPlayers[randomIndex];
+                Debug.Log("hit hwm");
                 RabidBiteDamage(target);
                 break;
             case 2:
                 target = FriendlyPlayers[randomIndex];
+                Debug.Log("hit pd");
                 RabidBiteDamage(target);
                 break;
         }
@@ -65,7 +69,7 @@ public class EnemyAbilities : MonoBehaviour
         switch (randomIndex)
         {
             case 0:
-                target = FriendlyPlayers[randomIndex];
+                GameObject target = FriendlyPlayers[randomIndex];
                 DiseasedSpitDamage(target);
                 break;
             case 1:
@@ -84,7 +88,7 @@ public class EnemyAbilities : MonoBehaviour
         switch (randomIndex)
         {
             case 0:
-                target = FriendlyPlayers[randomIndex];
+                GameObject target = FriendlyPlayers[randomIndex];
                 SlimeBashDamage(target);
                 break;
             case 1:
@@ -103,7 +107,7 @@ public class EnemyAbilities : MonoBehaviour
         switch (randomIndex)
         {
             case 0:
-                target = FriendlyPlayers[randomIndex];
+                GameObject target = FriendlyPlayers[randomIndex];
                 ShankDamage(target);
                 break;
             case 1:
@@ -122,7 +126,7 @@ public class EnemyAbilities : MonoBehaviour
         switch (randomIndex)
         {
             case 0:
-                target = FriendlyPlayers[randomIndex];
+                GameObject target = FriendlyPlayers[randomIndex];
                 BashDamage(target);
                 break;
             case 1:
@@ -141,7 +145,7 @@ public class EnemyAbilities : MonoBehaviour
         switch (randomIndex)
         {
             case 0:
-                target = FriendlyPlayers[randomIndex];
+                GameObject target = FriendlyPlayers[randomIndex];
                 SpitDamage(target);
                 break;
             case 1:

@@ -82,7 +82,7 @@ public class TurnController : MonoBehaviour
                 if (!IsAlive(target))
                     targetTeam.Remove(target);
 
-                yield return new WaitForSeconds(3.0f); // Delay between turns
+
             }
         }
         if(team1.Count == 0)
